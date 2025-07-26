@@ -1,0 +1,180 @@
+<!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>ChatGPTとは</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 944px; margin: 0;
+            padding: 0;}
+        .circuit-pattern {
+            background-image: radial-gradient(#3b82f6 1px, transparent 1px),
+                             radial-gradient(#3b82f6 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.1;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 944px;
+            position: relative;
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .chat-bubble {
+            position: relative;
+            padding: 12px 20px;
+            border-radius: 18px;
+            max-width: 80%;
+            margin-bottom: 12px;
+        }
+        .user-bubble {
+            background-color: #e2e8f0;
+            border-top-right-radius: 2px;
+            margin-left: auto;
+        }
+        .ai-bubble {
+            background-color: #dbeafe;
+            border-top-left-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col relative overflow-hidden">
+<!-- Circuit pattern background -->
+<div class="circuit-pattern absolute inset-0"></div>
+<!-- Header -->
+<div class="w-full bg-blue-600 py-4 px-12 flex items-center z-10">
+<h1 class="text-4xl font-bold text-white">ChatGPTとは</h1>
+</div>
+<!-- Content -->
+<div class="flex flex-1 p-10 z-10">
+<!-- Left Column - What is ChatGPT -->
+<div class="w-1/2 pr-6">
+<div class="bg-white rounded-lg p-6 shadow-md mb-6">
+<div class="flex items-start mb-4">
+<div class="bg-blue-100 rounded-full p-3 mr-4 flex-shrink-0">
+<i class="fas fa-robot text-blue-600 text-2xl"></i>
+</div>
+<div>
+<h2 class="text-2xl font-semibold text-gray-800 mb-2">ChatGPTの概要</h2>
+<p class="text-gray-700">
+                                ChatGPTは、<span class="font-medium text-blue-600">OpenAI</span>によって開発された、
+                                高性能なAIチャットボットです。自然言語処理（NLP）技術を用いて、
+                                人間と対話しているかのような自然な文章を生成することができます。
+                            </p>
+</div>
+</div>
+<div class="ml-16 mt-4">
+<p class="text-gray-700 mb-4">
+                            単に質問に答えるだけでなく、ユーザーの指示に応じて様々なタスクを実行できるのが大きな特徴です。
+                            ChatGPTは<span class="font-medium">「生成AI（Generative AI）」</span>と呼ばれるAIの一種であり、
+                            ユーザーがプロンプト（指示文）を入力することで、AIが全く新しいテキスト、アイデアなどを創り出すことができます。
+                        </p>
+</div>
+</div>
+<!-- Chat Example -->
+<div class="bg-white rounded-lg p-6 shadow-md">
+<h3 class="text-lg font-semibold text-gray-800 mb-3 flex items-center">
+<i class="fas fa-comments text-blue-500 mr-2"></i>
+                        対話例
+                    </h3>
+<div class="chat-container">
+<div class="chat-bubble user-bubble">
+<p class="text-gray-800">来週の部署会議の議事録テンプレートを作成してください。</p>
+</div>
+<div class="chat-bubble ai-bubble">
+<p class="text-gray-800">以下に部署会議の議事録テンプレートをご用意しました：</p>
+<p class="text-gray-700 mt-2">
+<strong>部署会議 議事録</strong><br/>
+                                日時：YYYY年MM月DD日 HH:MM～HH:MM<br/>
+                                場所：会議室名<br/>
+                                参加者：〇〇部長、△△課長、□□さん...<br/>
+                                議題：<br/>
+                                1. 前回の議事録確認<br/>
+                                2. 進捗状況の報告<br/>
+                                3. 課題と対策...<br/>
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column - ChatGPT Functions -->
+<div class="w-1/2 pl-6">
+<h2 class="text-2xl font-semibold text-gray-800 mb-4">ChatGPTの基本的な機能</h2>
+<div class="grid grid-cols-2 gap-4">
+<!-- Function 1: Conversation &amp; Q&amp;A -->
+<div class="feature-card bg-white rounded-lg p-5 shadow-md">
+<div class="flex items-center mb-3">
+<div class="bg-blue-100 rounded-full p-3 mr-3 flex-shrink-0">
+<i class="fas fa-comments text-blue-600 text-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-800">対話・質疑応答</h3>
+</div>
+<p class="text-gray-700">
+                            日常的な会話から専門的な質問まで、幅広いトピックについて対話形式で回答します。
+                        </p>
+</div>
+<!-- Function 2: Text Creation &amp; Summarization -->
+<div class="feature-card bg-white rounded-lg p-5 shadow-md">
+<div class="flex items-center mb-3">
+<div class="bg-blue-100 rounded-full p-3 mr-3 flex-shrink-0">
+<i class="fas fa-file-alt text-blue-600 text-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-800">文章作成・要約</h3>
+</div>
+<p class="text-gray-700">
+                            メール、レポート、ブログ記事などの文章を作成したり、長い文章を短く要約したりします。
+                        </p>
+</div>
+<!-- Function 3: Translation -->
+<div class="feature-card bg-white rounded-lg p-5 shadow-md">
+<div class="flex items-center mb-3">
+<div class="bg-blue-100 rounded-full p-3 mr-3 flex-shrink-0">
+<i class="fas fa-language text-blue-600 text-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-800">翻訳</h3>
+</div>
+<p class="text-gray-700">
+                            指定した文章を、日本語から英語へ、英語から日本語へなど、多言語に翻訳します。
+                        </p>
+</div>
+<!-- Function 4: Idea Generation -->
+<div class="feature-card bg-white rounded-lg p-5 shadow-md">
+<div class="flex items-center mb-3">
+<div class="bg-blue-100 rounded-full p-3 mr-3 flex-shrink-0">
+<i class="fas fa-lightbulb text-blue-600 text-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-800">アイデア出し</h3>
+</div>
+<p class="text-gray-700">
+                            新しい企画のアイデア、キャッチコピー、問題解決策などを提案します。
+                        </p>
+</div>
+<!-- Function 5: Code Generation -->
+<div class="feature-card bg-white rounded-lg p-5 shadow-md col-span-2">
+<div class="flex items-center mb-3">
+<div class="bg-blue-100 rounded-full p-3 mr-3 flex-shrink-0">
+<i class="fas fa-code text-blue-600 text-xl"></i>
+</div>
+<h3 class="text-lg font-semibold text-gray-800">コード生成</h3>
+</div>
+<p class="text-gray-700">
+                            簡単なプログラムのコードを作成したり、既存のコードの誤りを修正したりします。
+                        </p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="absolute bottom-4 right-8 text-gray-500">
+<p>6 / 20</p>
+</div>
+</div>
+
+</body></html>

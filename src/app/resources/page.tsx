@@ -5,18 +5,21 @@ import { motion } from 'framer-motion';
 import { FileText, Download, Eye, Search, Filter, Calendar, Tag } from 'lucide-react';
 import Link from 'next/link';
 import PDFViewer from '@/components/PDFViewer';
+import HTMLViewer from '@/components/HTMLViewer';
 
 interface Resource {
   id: string;
   title: string;
   description: string;
   category: string;
-  type: 'presentation' | 'document' | 'article';
+  type: 'presentation' | 'document' | 'article' | 'html-slides';
   date: string;
   tags: string[];
   fileUrl?: string;
   previewUrl?: string;
   size?: string;
+  totalPages?: number;
+  basePath?: string;
 }
 
 export default function Resources() {
@@ -24,9 +27,22 @@ export default function Resources() {
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedType, setSelectedType] = useState('all');
   const [viewingPDF, setViewingPDF] = useState<Resource | null>(null);
+  const [viewingHTML, setViewingHTML] = useState<Resource | null>(null);
 
   // 実際の資料データ
   const resources: Resource[] = [
+    {
+      id: 'ai-intro',
+      title: 'AI入門：事務職のためのAI基礎知識',
+      description: 'AIの基本から活用方法まで、初心者にもわかりやすく解説した20ページのプレゼンテーション資料',
+      category: 'AI・ツール活用',
+      type: 'html-slides',
+      date: '2025-01-27',
+      tags: ['AI', '基礎知識', '事務職', 'ChatGPT', '業務活用', '倫理'],
+      totalPages: 20,
+      basePath: '/AI入門：事務職のためのAI基礎知識',
+      size: '20 pages'
+    },
     {
       id: '1',
       title: 'NotebookLM完全活用ガイド',
@@ -84,8 +100,8 @@ export default function Resources() {
     }
   ];
 
-  const categories = ['all', 'ビジネス戦略', 'サービス設計', '技術解説', 'ケーススタディ'];
-  const types = ['all', 'presentation', 'document', 'article'];
+  const categories = ['all', 'AI・ツール活用', 'ビジネス戦略', 'サービス設計', '技術解説', 'ケーススタディ'];
+  const types = ['all', 'presentation', 'document', 'article', 'html-slides'];
 
   const filteredResources = resources.filter(resource => {
     const matchesSearch = resource.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
@@ -101,6 +117,7 @@ export default function Resources() {
       case 'presentation': return '📊';
       case 'document': return '📄';
       case 'article': return '📝';
+      case 'html-slides': return '🎯';
       default: return '📁';
     }
   };
@@ -110,6 +127,7 @@ export default function Resources() {
       case 'presentation': return 'プレゼンテーション';
       case 'document': return '文書';
       case 'article': return '記事';
+      case 'html-slides': return 'HTMLスライド';
       default: return 'その他';
     }
   };
@@ -266,24 +284,36 @@ export default function Resources() {
 
                   {/* Actions */}
                   <div className="flex gap-2">
-                    {resource.fileUrl && (
+                    {resource.type === 'html-slides' ? (
                       <button 
-                        onClick={() => setViewingPDF(resource)}
-                        className="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors duration-200 flex items-center justify-center gap-2"
-                      >
-                        <Eye size={16} />
-                        プレビュー
-                      </button>
-                    )}
-                    {resource.fileUrl && (
-                      <a
-                        href={resource.fileUrl}
-                        download
+                        onClick={() => setViewingHTML(resource)}
                         className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
                       >
-                        <Download size={16} />
-                        ダウンロード
-                      </a>
+                        <Eye size={16} />
+                        スライドを見る
+                      </button>
+                    ) : (
+                      <>
+                        {resource.fileUrl && (
+                          <button 
+                            onClick={() => setViewingPDF(resource)}
+                            className="flex-1 bg-gray-100 text-gray-700 py-2 px-4 rounded-lg font-semibold hover:bg-gray-200 transition-colors duration-200 flex items-center justify-center gap-2"
+                          >
+                            <Eye size={16} />
+                            プレビュー
+                          </button>
+                        )}
+                        {resource.fileUrl && (
+                          <a
+                            href={resource.fileUrl}
+                            download
+                            className="flex-1 bg-blue-600 text-white py-2 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2"
+                          >
+                            <Download size={16} />
+                            ダウンロード
+                          </a>
+                        )}
+                      </>
                     )}
                   </div>
                 </div>
@@ -335,6 +365,14 @@ export default function Resources() {
           fileUrl={viewingPDF.fileUrl}
           title={viewingPDF.title}
           onClose={() => setViewingPDF(null)}
+        />
+      )}
+
+      {/* HTML Viewer Modal */}
+      {viewingHTML && (
+        <HTMLViewer
+          resource={viewingHTML}
+          onClose={() => setViewingHTML(null)}
         />
       )}
     </div>

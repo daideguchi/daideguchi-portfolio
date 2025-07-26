@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="ja"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AIが解決できる課題：事務作業の効率化</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 881px; margin: 0;
+            padding: 0;}
+        .circuit-pattern {
+            background-image: radial-gradient(#3b82f6 1px, transparent 1px),
+                             radial-gradient(#3b82f6 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-position: 0 0, 10px 10px;
+            opacity: 0.1;
+        }
+        .slide-container {
+            width: 1280px;
+            min-height: 881px;
+            position: relative;
+        }
+        .task-card {
+            transition: all 0.3s ease;
+        }
+        .task-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+        .icon-container {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+<div class="slide-container bg-gradient-to-br from-gray-50 to-gray-100 flex flex-col relative overflow-hidden">
+<!-- Circuit pattern background -->
+<div class="circuit-pattern absolute inset-0"></div>
+<!-- Header -->
+<div class="w-full bg-blue-600 py-4 px-12 flex items-center z-10">
+<h1 class="text-4xl font-bold text-white">AIが解決できる課題：事務作業の効率化</h1>
+</div>
+<!-- Content -->
+<div class="flex flex-col flex-1 p-12 z-10">
+<!-- Introduction with stats -->
+<div class="bg-white rounded-lg p-5 shadow-md mb-6">
+<div class="flex items-center justify-between">
+<div class="flex-1">
+<p class="text-lg text-gray-700">
+                            AIは定型的な作業を自動化し、より創造的で付加価値の高い業務に集中できる環境を創出します。
+                        </p>
+<p class="text-gray-600 mt-2">
+<span class="font-semibold">MITの研究によれば</span>、生成AIを活用することで高度なスキルを持つ労働者のパフォーマンスが<span class="text-blue-600 font-semibold">約40%向上</span>。
+                            また、ある調査ではAIツールを導入したビジネスユーザーの業務処理能力が<span class="text-blue-600 font-semibold">平均で66%向上</span>したと報告されています。
+                        </p>
+</div>
+<div class="w-64 h-24" id="chart"></div>
+</div>
+</div>
+<!-- Task categories -->
+<div class="grid grid-cols-3 gap-5 flex-1">
+<!-- Document Creation -->
+<div class="task-card bg-white rounded-lg p-5 shadow-md flex flex-col">
+<div class="flex items-center mb-4">
+<div class="icon-container bg-blue-100 rounded-full mr-3">
+<i class="fas fa-file-alt text-blue-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800">文書・資料作成</h3>
+</div>
+<ul class="space-y-2 text-gray-700 flex-1">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+<span>メールや報告書のドラフトを数秒で自動生成</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+<span>会議の音声データから議事録を自動作成・要約</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+<span>キーワードからプレゼン資料を自動生成</span>
+</li>
+</ul>
+<div class="mt-3 pt-3 border-t border-gray-200">
+<p class="text-sm text-gray-600 font-semibold">関連ツール:</p>
+<p class="text-sm text-blue-600">Microsoft 365 Copilot, Google Workspace (Gemini), Jasper, Fireflies, Tome</p>
+</div>
+</div>
+<!-- Data Entry &amp; Management -->
+<div class="task-card bg-white rounded-lg p-5 shadow-md flex flex-col">
+<div class="flex items-center mb-4">
+<div class="icon-container bg-blue-100 rounded-full mr-3">
+<i class="fas fa-database text-blue-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800">データ入力・管理</h3>
+</div>
+<ul class="space-y-2 text-gray-700 flex-1">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+<span>紙の請求書や名刺をスキャンし、データを自動入力・整理</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+<span>複数システム間のデータ転記作業を自動化（RPA）</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+<span>膨大なデータから必要な情報を瞬時に検索・抽出</span>
+</li>
+</ul>
+<div class="mt-3 pt-3 border-t border-gray-200">
+<p class="text-sm text-gray-600 font-semibold">関連ツール:</p>
+<p class="text-sm text-blue-600">UiPath, Zapier, Notion AI, Perplexity</p>
+</div>
+</div>
+<!-- Schedule Management -->
+<div class="task-card bg-white rounded-lg p-5 shadow-md flex flex-col">
+<div class="flex items-center mb-4">
+<div class="icon-container bg-blue-100 rounded-full mr-3">
+<i class="fas fa-calendar-alt text-blue-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800">スケジュール管理</h3>
+</div>
+<ul class="space-y-2 text-gray-700 flex-1">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+<span>参加者の空き時間を考慮し、会議を自動設定</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+<span>タスクの優先度や締め切りに基づき、1日のスケジュールを最適化</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-blue-500 mt-1 mr-2"></i>
+<span>繰り返し行われる会議の自動スケジューリング</span>
+</li>
+</ul>
+<div class="mt-3 pt-3 border-t border-gray-200">
+<p class="text-sm text-gray-600 font-semibold">関連ツール:</p>
+<p class="text-sm text-blue-600">Motion, Reclaim, Clockwise</p>
+</div>
+</div>
+</div>
+<!-- Second row of tasks -->
+<div class="grid grid-cols-3 gap-5 mt-5">
+<!-- Financial Management -->
+<div class="task-card bg-white rounded-lg p-5 shadow-md">
+<div class="flex items-center mb-3">
+<div class="icon-container bg-blue-100 rounded-full mr-3">
+<i class="fas fa-coins text-blue-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800">経理・会計</h3>
+</div>
+<p class="text-gray-700 mb-2">領収書や請求書のデータを自動読取り、会計ソフトに入力。経費精算の申請内容をチェックし、規定違反を自動検出。</p>
+<p class="text-sm text-gray-600"><span class="font-semibold">関連ツール:</span> <span class="text-blue-600">Trullion, Netgain, Digits</span></p>
+</div>
+<!-- HR &amp; Recruitment -->
+<div class="task-card bg-white rounded-lg p-5 shadow-md">
+<div class="flex items-center mb-3">
+<div class="icon-container bg-blue-100 rounded-full mr-3">
+<i class="fas fa-users text-blue-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800">人事・採用</h3>
+</div>
+<p class="text-gray-700 mb-2">大量の応募書類から要件に合致する候補者を自動抽出。従業員からの定型的な問い合わせにチャットボットが自動回答。</p>
+<p class="text-sm text-gray-600"><span class="font-semibold">関連ツール:</span> <span class="text-blue-600">Findem, Phenom</span></p>
+</div>
+<!-- Information Collection -->
+<div class="task-card bg-white rounded-lg p-5 shadow-md">
+<div class="flex items-center mb-3">
+<div class="icon-container bg-blue-100 rounded-full mr-3">
+<i class="fas fa-search text-blue-600 text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold text-gray-800">情報収集・整理</h3>
+</div>
+<p class="text-gray-700 mb-2">社内ドキュメントや過去のメールから必要な情報を瞬時に検索。Web上の膨大な情報から特定テーマに関するレポートを自動作成。</p>
+<p class="text-sm text-gray-600"><span class="font-semibold">関連ツール:</span> <span class="text-blue-600">Notion AI, Perplexity</span></p>
+</div>
+</div>
+</div>
+<!-- Footer with page number -->
+<div class="absolute bottom-4 right-8 text-gray-500">
+<p>11 / 20</p>
+</div>
+</div>
+<script>
+        // Simple D3.js chart showing productivity improvement
+        document.addEventListener('DOMContentLoaded', function() {
+            const data = [
+                {label: "生成AI導入前", value: 100},
+                {label: "生成AI導入後", value: 140}
+            ];
+            
+            const width = 240;
+            const height = 120;
+            const margin = {top: 20, right: 20, bottom: 30, left: 40};
+            const chartWidth = width - margin.left - margin.right;
+            const chartHeight = height - margin.top - margin.bottom;
+            
+            const svg = d3.select("#chart")
+                .append("svg")
+                .attr("width", width)
+                .attr("height", height)
+                .append("g")
+                .attr("transform", `translate(${margin.left}, ${margin.top})`);
+            
+            const x = d3.scaleBand()
+                .domain(data.map(d => d.label))
+                .range([0, chartWidth])
+                .padding(0.3);
+                
+            const y = d3.scaleLinear()
+                .domain([0, 150])
+                .range([chartHeight, 0]);
+            
+            // Add bars
+            svg.selectAll(".bar")
+                .data(data)
+                .enter()
+                .append("rect")
+                .attr("class", "bar")
+                .attr("x", d => x(d.label))
+                .attr("y", d => y(d.value))
+                .attr("width", x.bandwidth())
+                .attr("height", d => chartHeight - y(d.value))
+                .attr("fill", (d, i) => i === 0 ? "#94a3b8" : "#3b82f6");
+            
+            // Add labels
+            svg.selectAll(".label")
+                .data(data)
+                .enter()
+                .append("text")
+                .attr("class", "label")
+                .attr("x", d => x(d.label) + x.bandwidth() / 2)
+                .attr("y", d => y(d.value) - 5)
+                .attr("text-anchor", "middle")
+                .attr("fill", "#4b5563")
+                .attr("font-size", "12px")
+                .text(d => d.value + "%");
+            
+            // Add x-axis
+            svg.append("g")
+                .attr("transform", `translate(0, ${chartHeight})`)
+                .call(d3.axisBottom(x))
+                .selectAll("text")
+                .attr("font-size", "10px");
+                
+            // Add title
+            svg.append("text")
+                .attr("x", chartWidth / 2)
+                .attr("y", 0)
+                .attr("text-anchor", "middle")
+                .attr("font-size", "12px")
+                .attr("fill", "#4b5563")
+                .text("AIによる生産性向上");
+        });
+    </script>
+
+</body></html>
