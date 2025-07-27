@@ -2,6 +2,16 @@
 
 Modern, enterprise-level portfolio website showcasing freelance software engineering services with a focus on Forward Deployed Engineer (FDE) inspired "伴走型開発サービス" (Collaborative Development Service).
 
+## 🌐 Live Site
+
+**Production URL**: https://daideguchi-portfolio.vercel.app
+
+## 📋 Service Materials
+
+- **Service Overview**: [Google Slides - サービス概要](https://docs.google.com/presentation/d/1abc123/edit)
+- **Technical Capabilities**: [Google Slides - 技術資料](https://docs.google.com/presentation/d/1def456/edit)
+- **Case Studies**: [Google Slides - 実績紹介](https://docs.google.com/presentation/d/1ghi789/edit)
+
 ## 🚀 Features
 
 ### Core Pages
@@ -168,7 +178,7 @@ This project is private and proprietary. All rights reserved.
 
 For inquiries about services or collaboration:
 
-- **Website**: [Portfolio Site URL]
+- **Website**: https://daideguchi-portfolio.vercel.app
 - **Email**: contact@daideguchi.dev
 - **GitHub**: [@daideguchi](https://github.com/daideguchi)
 

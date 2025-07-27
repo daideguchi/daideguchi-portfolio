@@ -28,17 +28,17 @@ export default function Home() {
             </div>
             
             <h1 className="text-6xl md:text-8xl font-black text-gray-900 mb-6 leading-tight">
-              AI is{' '}
+              Build{' '}
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Future
+                Solutions
               </span>
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-700 mb-4 font-light max-w-4xl mx-auto leading-relaxed">
-              🚀 AIでビジネスを革新する
+              🚀 実際に動作するプロダクトで価値を提供
             </p>
             <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
-              AI開発・機械学習・LLM活用専門エンジニア
+              フルスタック開発・SaaS構築・エンタープライズソリューション
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -59,16 +59,16 @@ export default function Home() {
             
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">🤖 30+</div>
-                <div className="text-gray-600">AI プロジェクト</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">💼 50+</div>
+                <div className="text-gray-600">エンタープライズ案件</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">🚀 10+</div>
-                <div className="text-gray-600">LLM アプリ開発</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">🚀 15+</div>
+                <div className="text-gray-600">SaaS プロダクト</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-pink-600 mb-2">⚡ 5+</div>
-                <div className="text-gray-600">年のAI経験</div>
+                <div className="text-4xl font-bold text-pink-600 mb-2">⚡ 7+</div>
+                <div className="text-gray-600">年の開発経験</div>
               </div>
             </div>
           </motion.div>
@@ -85,67 +85,82 @@ export default function Home() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              🤖 AI<span className="text-blue-600">専門領域</span>
+              🚀 実際の<span className="text-blue-600">プロダクト</span>
             </h2>
             <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
-              最新のAI技術でビジネス課題を解決
+              動作するデモで技術力を実証
             </p>
           </motion.div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="group text-center p-10 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-blue-100"
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
-                <Code className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                🧠 機械学習・AI開発
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                TensorFlow、PyTorch、OpenAI APIを活用した機械学習モデルの開発から、
-                LLMを使った革新的なAIアプリケーションまで幅広く対応します。
-              </p>
-            </motion.div>
+            <Link href="/projects/saas-platform">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                className="group text-center p-10 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-blue-100 cursor-pointer"
+              >
+                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
+                  <Code className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  💼 Enterprise SaaS Platform
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  マルチテナント対応のエンタープライズSaaSプラットフォーム。
+                  ユーザー管理、課金システム、分析ダッシュボードを統合した実際に動作するデモ。
+                </p>
+                <div className="mt-4 text-blue-600 font-semibold">
+                  → デモを体験する
+                </div>
+              </motion.div>
+            </Link>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="group text-center p-10 rounded-3xl bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-purple-100"
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
-                <Zap className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                🚀 LLM・生成AI活用
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                ChatGPT、Claude、Geminiなどの最新LLMを活用した
-                チャットボット、文書生成、データ分析システムを構築します。
-              </p>
-            </motion.div>
+            <Link href="/projects/task-manager">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="group text-center p-10 rounded-3xl bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-purple-100 cursor-pointer"
+              >
+                <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
+                  <Zap className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  📋 Task Management App
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  リアルタイム同期とカンバンボード機能を持つタスク管理アプリ。
+                  チーム協業、優先度管理、進捗追跡機能を実装した実用的なデモ。
+                </p>
+                <div className="mt-4 text-purple-600 font-semibold">
+                  → デモを体験する
+                </div>
+              </motion.div>
+            </Link>
 
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="group text-center p-10 rounded-3xl bg-gradient-to-br from-green-50 to-teal-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-green-100"
-            >
-              <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
-                <Users className="w-10 h-10 text-white" />
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                ⚡ AI業務自動化
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                RPA、OCR、自然言語処理を組み合わせた業務自動化システムで、
-                人的コストを大幅削減し、生産性を向上させます。
-              </p>
-            </motion.div>
+            <Link href="/projects/ecommerce">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="group text-center p-10 rounded-3xl bg-gradient-to-br from-green-50 to-teal-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-green-100 cursor-pointer"
+              >
+                <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
+                  <Users className="w-10 h-10 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  🛒 E-commerce Platform
+                </h3>
+                <p className="text-gray-600 leading-relaxed">
+                  フル機能のECプラットフォーム。商品管理、ショッピングカート、
+                  決済システム、在庫管理を統合した実際に動作するデモ。
+                </p>
+                <div className="mt-4 text-green-600 font-semibold">
+                  → デモを体験する
+                </div>
+              </motion.div>
+            </Link>
           </div>
         </div>
       </section>
