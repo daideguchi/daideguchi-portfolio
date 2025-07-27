@@ -175,3 +175,5 @@ For inquiries about services or collaboration:
 ---
 
 Built with ❤️ using Next.js and modern web technologies.
+
+Last updated: 2025-07-27
