@@ -1,95 +1,83 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Globe, Smartphone, Cloud, Users, Zap, Shield } from 'lucide-react';
+import { Brain, Bot, Zap, Shield, Database, Cpu } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Services() {
   const services = [
     {
-      icon: Users,
-      title: '伴走型開発サービス',
-      description: '顧客の現場に深く入り込み、一緒に課題を発見・解決する新しい開発スタイル',
+      icon: Brain,
+      title: '🤖 AI・機械学習開発',
+      description: '最新のAI技術を活用したインテリジェントなシステム開発',
       features: [
-        '現場密着型の課題発見',
-        '段階的なリスク軽減',
-        '継続的な改善サポート',
-        '長期パートナーシップ',
+        'カスタム機械学習モデル開発',
+        '画像・音声・テキスト解析',
+        '予測分析・レコメンドシステム',
+        'MLOps・モデル運用',
       ],
-      price: 'フェーズ別価格設定',
+      price: '¥800,000〜',
       featured: true,
     },
     {
-      icon: Globe,
-      title: 'Webアプリケーション開発',
-      description: 'React/Next.jsを使用したモダンなWebアプリケーションの設計・開発',
+      icon: Bot,
+      title: '🚀 LLM・生成AI活用',
+      description: 'ChatGPT、Claude等の大規模言語モデルを活用したアプリケーション開発',
       features: [
-        'レスポンシブデザイン',
-        'SEO最適化',
-        'パフォーマンス最適化',
-        'アクセシビリティ対応',
+        'AIチャットボット開発',
+        '文書生成・要約システム',
+        'RAG（検索拡張生成）システム',
+        'プロンプトエンジニアリング',
+      ],
+      price: '¥600,000〜',
+    },
+    {
+      icon: Zap,
+      title: '⚡ AI業務自動化',
+      description: 'AIを活用した業務プロセスの自動化・効率化',
+      features: [
+        'RPA + AI による高度自動化',
+        'OCR・文書処理自動化',
+        'データ入力・分析自動化',
+        'ワークフロー最適化',
       ],
       price: '¥500,000〜',
     },
     {
-      icon: Smartphone,
-      title: 'モバイルアプリ開発',
-      description: 'React NativeやPWAを活用したクロスプラットフォーム対応',
+      icon: Database,
+      title: '📊 AIデータ分析',
+      description: 'ビッグデータとAIを組み合わせた高度なデータ分析・可視化',
       features: [
-        'iOS/Android対応',
-        'ネイティブ機能連携',
-        'オフライン対応',
-        'プッシュ通知',
+        'ビッグデータ処理・分析',
+        'AI予測モデル構築',
+        'リアルタイムダッシュボード',
+        'ビジネスインサイト抽出',
       ],
-      price: '¥800,000〜',
+      price: '¥700,000〜',
     },
     {
-      icon: Cloud,
-      title: 'クラウドインフラ構築',
-      description: 'AWS/GCPを活用したスケーラブルなインフラ設計・構築',
+      icon: Cpu,
+      title: '🧠 AIコンサルティング',
+      description: 'AI導入戦略からPoC開発まで包括的なAIコンサルティング',
       features: [
-        'サーバーレス構成',
-        'CI/CD構築',
-        'モニタリング設定',
-        'セキュリティ対策',
+        'AI導入戦略策定',
+        'PoC（概念実証）開発',
+        'AI人材育成支援',
+        'ROI分析・効果測定',
       ],
-      price: '¥300,000〜',
-    },
-    {
-      icon: Users,
-      title: '技術コンサルティング',
-      description: '技術選定からアーキテクチャ設計まで包括的なコンサルティング',
-      features: [
-        '技術選定支援',
-        'アーキテクチャ設計',
-        'コードレビュー',
-        'チーム教育',
-      ],
-      price: '¥100,000〜/月',
-    },
-    {
-      icon: Zap,
-      title: 'プロトタイプ開発',
-      description: 'アイデア検証のための迅速なプロトタイプ開発',
-      features: [
-        '迅速な開発',
-        'MVP構築',
-        'ユーザーテスト支援',
-        '改善提案',
-      ],
-      price: '¥200,000〜',
+      price: '¥150,000〜/月',
     },
     {
       icon: Shield,
-      title: 'システム保守・運用',
-      description: '既存システムの保守・運用・改善',
+      title: '🔒 AI倫理・セキュリティ',
+      description: 'AI システムの倫理的配慮とセキュリティ対策',
       features: [
-        '定期メンテナンス',
-        'セキュリティ更新',
-        'パフォーマンス改善',
-        '機能追加',
+        'AI倫理ガイドライン策定',
+        'バイアス検出・軽減',
+        'プライバシー保護対策',
+        'AI監査・リスク評価',
       ],
-      price: '¥50,000〜/月',
+      price: '¥400,000〜',
     },
   ];
 
@@ -133,10 +121,10 @@ export default function Services() {
             className="text-center"
           >
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Services
+              🤖 AI開発サービス
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              お客様のビジネス課題を解決する包括的なソリューションを提供します
+              最新のAI技術でビジネスを革新し、競争優位性を創出します
             </p>
           </motion.div>
         </div>
@@ -152,10 +140,10 @@ export default function Services() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              提供サービス
+              🚀 AI専門サービス
             </h2>
             <p className="text-xl text-gray-600">
-              技術力とビジネス理解を組み合わせた価値提供
+              機械学習からLLM活用まで、AIの力でビジネスを加速
             </p>
           </motion.div>
 

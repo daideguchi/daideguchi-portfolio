@@ -24,21 +24,21 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-8 shadow-lg">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              伴走型開発サービス提供中
+              🤖 AI開発・コンサルティング専門
             </div>
             
             <h1 className="text-6xl md:text-8xl font-black text-gray-900 mb-6 leading-tight">
-              Code is{' '}
+              AI is{' '}
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Design
+                Future
               </span>
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-700 mb-4 font-light max-w-4xl mx-auto leading-relaxed">
-              技術とビジネスの架け橋となる
+              🚀 AIでビジネスを革新する
             </p>
             <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
-              フリーランスソフトウェアエンジニア
+              AI開発・機械学習・LLM活用専門エンジニア
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -50,25 +50,25 @@ export default function Home() {
                 <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
-                href="/services/fde"
+                href="/services"
                 className="group border-3 border-gray-300 text-gray-700 px-10 py-5 rounded-2xl font-bold text-lg hover:border-blue-600 hover:text-blue-600 hover:shadow-xl transition-all duration-300"
               >
-                伴走型サービス詳細
+                🤖 AI開発サービス詳細
               </Link>
             </div>
             
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">5+</div>
-                <div className="text-gray-600">年の経験</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">🤖 30+</div>
+                <div className="text-gray-600">AI プロジェクト</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">50+</div>
-                <div className="text-gray-600">プロジェクト完了</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">🚀 10+</div>
+                <div className="text-gray-600">LLM アプリ開発</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-pink-600 mb-2">99%</div>
-                <div className="text-gray-600">顧客満足度</div>
+                <div className="text-4xl font-bold text-pink-600 mb-2">⚡ 5+</div>
+                <div className="text-gray-600">年のAI経験</div>
               </div>
             </div>
           </motion.div>
@@ -85,10 +85,10 @@ export default function Home() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              私の<span className="text-blue-600">強み</span>
+              🤖 AI<span className="text-blue-600">専門領域</span>
             </h2>
             <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
-              技術力とビジネス理解を組み合わせた価値提供
+              最新のAI技術でビジネス課題を解決
             </p>
           </motion.div>
 
@@ -103,11 +103,11 @@ export default function Home() {
                 <Code className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                モダン技術
+                🧠 機械学習・AI開発
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Next.js、React、TypeScriptなど最新の技術スタックを活用し、
-                スケーラブルで保守性の高いアプリケーションを構築します。
+                TensorFlow、PyTorch、OpenAI APIを活用した機械学習モデルの開発から、
+                LLMを使った革新的なAIアプリケーションまで幅広く対応します。
               </p>
             </motion.div>
 
@@ -121,11 +121,11 @@ export default function Home() {
                 <Zap className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                高速開発
+                🚀 LLM・生成AI活用
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                効率的な開発プロセスと豊富な経験により、
-                品質を保ちながら迅速なプロジェクト完了を実現します。
+                ChatGPT、Claude、Geminiなどの最新LLMを活用した
+                チャットボット、文書生成、データ分析システムを構築します。
               </p>
             </motion.div>
 
@@ -139,11 +139,11 @@ export default function Home() {
                 <Users className="w-10 h-10 text-white" />
               </div>
               <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                伴走型サポート
+                ⚡ AI業務自動化
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                顧客の現場に深く入り込み、技術的な実装だけでなく、
-                ビジネス課題の根本解決を目指します。
+                RPA、OCR、自然言語処理を組み合わせた業務自動化システムで、
+                人的コストを大幅削減し、生産性を向上させます。
               </p>
             </motion.div>
           </div>
