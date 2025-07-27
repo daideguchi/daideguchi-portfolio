@@ -9,13 +9,13 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { href: '/', label: 'Home' },
-    { href: '/about', label: 'About' },
-    { href: '/services', label: 'Services' },
-    { href: '/portfolio', label: 'Portfolio' },
-    { href: '/resources', label: 'Resources' },
-    { href: '/news', label: 'News' },
-    { href: '/contact', label: 'Contact' },
+    { href: '/', label: 'ホーム' },
+    { href: '/about', label: '私について' },
+    { href: '/services', label: 'サービス' },
+    { href: '/portfolio', label: 'ポートフォリオ' },
+    { href: '/resources', label: 'リソース' },
+    { href: '/news', label: 'ニュース' },
+    { href: '/contact', label: 'お問い合わせ' },
   ];
 
   return (
