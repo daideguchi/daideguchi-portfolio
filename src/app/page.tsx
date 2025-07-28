@@ -59,16 +59,16 @@ export default function Home() {
             
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">3</div>
-                <div className="text-gray-600">Live AI Demos</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">10+</div>
+                <div className="text-gray-600">AI Projects</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
-                <div className="text-gray-600">Functional Code</div>
+                <div className="text-gray-600">Open Source</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-pink-600 mb-2">Real-time</div>
-                <div className="text-gray-600">Experience</div>
+                <div className="text-4xl font-bold text-pink-600 mb-2">1</div>
+                <div className="text-gray-600">Live Product</div>
               </div>
             </div>
           </motion.div>
@@ -92,78 +92,213 @@ export default function Home() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-            <Link href="/projects/saas-platform">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <a href="https://asagamiai.com/" target="_blank" rel="noopener noreferrer">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.1 }}
-                className="group text-center p-10 rounded-3xl bg-gradient-to-br from-blue-50 to-indigo-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-blue-100 cursor-pointer"
+                className="group p-6 rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-blue-100 cursor-pointer h-full"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
-                  <Code className="w-10 h-10 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Code className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Enterprise SaaS Platform
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Asagami AI
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Multi-tenant enterprise platform with AI-driven analytics, 
-                  automated user management, and intelligent billing systems. 
-                  Features machine learning-powered insights and predictive analytics.
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  AI-powered learning system that analyzes study notes and generates personalized questions. 
+                  Features gamified learning experience with progress tracking.
                 </p>
-                <div className="mt-4 text-blue-600 font-semibold">
-                  → Experience Live Demo
+                <div className="text-blue-600 font-semibold text-sm">
+                  → Live Product
                 </div>
               </motion.div>
-            </Link>
+            </a>
 
-            <Link href="/projects/task-manager">
+            <a href="https://github.com/daideguchi/wisdom-blog" target="_blank" rel="noopener noreferrer">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="group text-center p-10 rounded-3xl bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-purple-100 cursor-pointer"
+                className="group p-6 rounded-2xl bg-gradient-to-br from-purple-50 to-pink-50 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-purple-100 cursor-pointer h-full"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-600 to-pink-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
-                  <Zap className="w-10 h-10 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  AI Task Management System
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  WISDOM Blog
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Intelligent task management with AI-powered priority optimization, 
-                  automated workflow suggestions, and predictive project completion analysis. 
-                  Real-time collaboration with smart resource allocation.
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  AI-powered developer knowledge management system that automatically converts 
+                  development logs into structured articles.
                 </p>
-                <div className="mt-4 text-purple-600 font-semibold">
-                  → Experience Live Demo
+                <div className="text-purple-600 font-semibold text-sm">
+                  → GitHub Repository
                 </div>
               </motion.div>
-            </Link>
+            </a>
 
-            <Link href="/projects/ecommerce">
+            <a href="https://github.com/daideguchi/ai-safety-monitor" target="_blank" rel="noopener noreferrer">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="group text-center p-10 rounded-3xl bg-gradient-to-br from-green-50 to-teal-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 border border-green-100 cursor-pointer"
+                className="group p-6 rounded-2xl bg-gradient-to-br from-green-50 to-teal-50 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-green-100 cursor-pointer h-full"
               >
-                <div className="w-20 h-20 bg-gradient-to-br from-green-600 to-teal-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:rotate-6 transition-transform duration-300">
-                  <Users className="w-10 h-10 text-white" />
+                <div className="w-16 h-16 bg-gradient-to-br from-green-600 to-teal-600 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  AI-Enhanced E-commerce Platform
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  AI Safety Monitor
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  Intelligent e-commerce solution with AI-powered product recommendations, 
-                  dynamic pricing optimization, and automated inventory management. 
-                  Features natural language search and personalized shopping experiences.
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Real-time AI safety monitoring dashboard with risk assessment 
+                  and compliance tracking for AI systems.
                 </p>
-                <div className="mt-4 text-green-600 font-semibold">
-                  → Experience Live Demo
+                <div className="text-green-600 font-semibold text-sm">
+                  → GitHub Repository
                 </div>
               </motion.div>
-            </Link>
+            </a>
+
+            <a href="https://github.com/daideguchi/ai-development-companion" target="_blank" rel="noopener noreferrer">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="group p-6 rounded-2xl bg-gradient-to-br from-orange-50 to-red-50 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-orange-100 cursor-pointer h-full"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-600 to-red-600 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Code className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  AI Development Companion
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Intelligent AI development partner that acts like a skilled human developer, 
+                  providing comprehensive coding assistance.
+                </p>
+                <div className="text-orange-600 font-semibold text-sm">
+                  → GitHub Repository
+                </div>
+              </motion.div>
+            </a>
+
+            <a href="https://github.com/daideguchi/constitutional-ai" target="_blank" rel="noopener noreferrer">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="group p-6 rounded-2xl bg-gradient-to-br from-cyan-50 to-blue-50 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-cyan-100 cursor-pointer h-full"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-cyan-600 to-blue-600 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Constitutional AI
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Ready-to-use Constitutional AI framework for building ethical 
+                  and aligned AI systems with built-in safety measures.
+                </p>
+                <div className="text-cyan-600 font-semibold text-sm">
+                  → GitHub Repository
+                </div>
+              </motion.div>
+            </a>
+
+            <a href="https://github.com/daideguchi/mcp-integration-toolkit" target="_blank" rel="noopener noreferrer">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.6 }}
+                className="group p-6 rounded-2xl bg-gradient-to-br from-violet-50 to-purple-50 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-violet-100 cursor-pointer h-full"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-violet-600 to-purple-600 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  MCP Integration Toolkit
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Complete Model Context Protocol (MCP) integration toolkit for 
+                  seamless AI model communication and context management.
+                </p>
+                <div className="text-violet-600 font-semibold text-sm">
+                  → GitHub Repository
+                </div>
+              </motion.div>
+            </a>
+
+            <a href="https://github.com/daideguchi/ai-news-dashboard" target="_blank" rel="noopener noreferrer">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+                className="group p-6 rounded-2xl bg-gradient-to-br from-emerald-50 to-green-50 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-emerald-100 cursor-pointer h-full"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-emerald-600 to-green-600 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Code className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  AI News Dashboard
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Daily AI news dashboard with structured data processing and 
+                  intelligent content curation for AI industry updates.
+                </p>
+                <div className="text-emerald-600 font-semibold text-sm">
+                  → GitHub Repository
+                </div>
+              </motion.div>
+            </a>
+
+            <a href="https://github.com/daideguchi/youtube-channel-analyzer" target="_blank" rel="noopener noreferrer">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="group p-6 rounded-2xl bg-gradient-to-br from-rose-50 to-pink-50 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-rose-100 cursor-pointer h-full"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-rose-600 to-pink-600 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Zap className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  YouTube Analytics Tool
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Advanced YouTube channel analysis tool with AI-powered insights 
+                  for content optimization and audience engagement.
+                </p>
+                <div className="text-rose-600 font-semibold text-sm">
+                  → GitHub Repository
+                </div>
+              </motion.div>
+            </a>
+
+            <a href="https://github.com/daideguchi/spreadsheet-image-generator" target="_blank" rel="noopener noreferrer">
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.9 }}
+                className="group p-6 rounded-2xl bg-gradient-to-br from-amber-50 to-yellow-50 hover:shadow-xl hover:scale-105 transition-all duration-300 border border-amber-100 cursor-pointer h-full"
+              >
+                <div className="w-16 h-16 bg-gradient-to-br from-amber-600 to-yellow-600 rounded-xl flex items-center justify-center mb-4 group-hover:rotate-6 transition-transform duration-300">
+                  <Users className="w-8 h-8 text-white" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  AI Image Generator
+                </h3>
+                <p className="text-gray-600 text-sm leading-relaxed mb-4">
+                  Spreadsheet-integrated AI image generator using OpenAI DALL-E API 
+                  for automated visual content creation workflows.
+                </p>
+                <div className="text-amber-600 font-semibold text-sm">
+                  → GitHub Repository
+                </div>
+              </motion.div>
+            </a>
           </div>
         </div>
       </section>

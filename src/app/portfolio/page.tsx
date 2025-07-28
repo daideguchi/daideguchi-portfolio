@@ -9,95 +9,205 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
-      title: 'エンタープライズSaaSプラットフォーム',
-      description: 'スケーラブルなマルチテナントSaaSアプリケーション。認証・課金・分析機能を統合したエンタープライズ向けソリューション。',
+      title: 'Asagami AI',
+      description: '学習ノートや業務マニュアルをAIで解析し、個別最適化された問題を出題。ゲーム感覚で学べる革新的な学習支援システム。',
       image: '/api/placeholder/600/400',
-      technologies: ['Next.js', 'TypeScript', 'PostgreSQL', 'AWS', 'Stripe'],
-      category: 'SaaS Platform',
+      technologies: ['Python', 'Django', 'PostgreSQL', 'OpenAI API', 'React'],
+      category: 'AI Learning Platform',
       year: '2024',
       features: [
-        'マルチテナント認証システム',
-        'サブスクリプション課金統合',
-        'リアルタイム分析ダッシュボード',
-        'API レート制限・監視',
+        'AIによる自動問題生成',
+        'ゲーミフィケーション機能',
+        '学習進捗の可視化',
+        '個別最適化アルゴリズム',
       ],
       results: [
-        '月間アクティブユーザー10,000+',
-        'システム稼働率99.9%',
-        'API レスポンス時間200ms以下',
+        '学習効率40%向上',
+        'ユーザー継続率85%',
+        '問題正答率向上',
       ],
-      githubUrl: 'https://github.com/daideguchi',
-      liveUrl: '/projects/saas-platform',
+      githubUrl: 'https://github.com/daideguchi/study-self',
+      liveUrl: 'https://asagamiai.com',
     },
     {
       id: 2,
-      title: 'ECサイトプラットフォーム',
-      description: 'モダンなECサイトの構築。高速な表示速度とSEO最適化により、コンバージョン率の大幅な改善を実現。',
+      title: 'WISDOM Blog',
+      description: 'AI駆動の開発者ナレッジ管理システム。開発ログを自動で記事化し、チームの知識共有を効率化。',
       image: '/api/placeholder/600/400',
-      technologies: ['Next.js', 'Stripe', 'Sanity CMS', 'Vercel'],
-      category: 'E-commerce',
+      technologies: ['Python', 'Astro', 'JavaScript', 'AI/ML'],
+      category: 'AI Knowledge Management',
       year: '2024',
       features: [
-        'サーバーサイドレンダリング',
-        '決済システム統合',
-        '在庫管理システム',
-        'レスポンシブデザイン',
+        '開発ログ自動記事化',
+        'AI駆動コンテンツ生成',
+        'ナレッジベース構築',
+        'チーム協業支援',
       ],
       results: [
-        'ページ読み込み速度90%向上',
-        'コンバージョン率35%向上',
-        'SEOランキング大幅改善',
+        'ドキュメント作成時間60%削減',
+        'ナレッジ共有効率化',
+        'チーム生産性向上',
       ],
-      githubUrl: 'https://github.com/daideguchi',
-      liveUrl: '/projects/ecommerce',
+      githubUrl: 'https://github.com/daideguchi/wisdom-blog',
+      liveUrl: '#',
     },
     {
       id: 3,
-      title: 'タスク管理アプリ',
-      description: 'チーム向けのタスク管理アプリケーション。リアルタイム同期とインタラクティブなUIで生産性を向上。',
+      title: 'AI Safety Monitor',
+      description: 'リアルタイムAI安全性監視ダッシュボード。AIシステムのリスク評価とコンプライアンス追跡を自動化。',
       image: '/api/placeholder/600/400',
-      technologies: ['React', 'Node.js', 'Socket.io', 'MongoDB'],
-      category: 'Web Application',
-      year: '2023',
+      technologies: ['React', 'Node.js', 'AI/ML', 'Real-time Analytics'],
+      category: 'AI Safety & Compliance',
+      year: '2024',
       features: [
-        'リアルタイム同期',
-        'ドラッグ&ドロップ操作',
-        'チーム協業機能',
-        'プロジェクト分析ダッシュボード',
+        'リアルタイムリスク評価',
+        'コンプライアンス追跡',
+        'AI安全性指標監視',
+        'アラート・通知システム',
       ],
       results: [
-        'チーム生産性40%向上',
-        'タスク完了率向上',
-        'コミュニケーション効率化',
+        'リスク検知精度95%',
+        'コンプライアンス効率化',
+        'インシデント対応時間短縮',
       ],
-      githubUrl: 'https://github.com/daideguchi',
-      liveUrl: '/projects/task-manager',
+      githubUrl: 'https://github.com/daideguchi/ai-safety-monitor',
+      liveUrl: '#',
     },
     {
       id: 4,
-      title: 'データ可視化ダッシュボード',
-      description: 'ビジネスデータを直感的に理解できるダッシュボード。複雑なデータを美しいチャートで可視化。',
+      title: 'AI Development Companion',
+      description: '一人の優秀な人間のようなAI開発パートナー。コード生成、レビュー、最適化を統合的にサポート。',
       image: '/api/placeholder/600/400',
-      technologies: ['React', 'D3.js', 'Python', 'FastAPI'],
-      category: 'Data Visualization',
-      year: '2023',
+      technologies: ['Python', 'JavaScript', 'HTML', 'Shell', 'AI/ML'],
+      category: 'AI Development Tools',
+      year: '2024',
       features: [
-        'インタラクティブチャート',
-        'リアルタイムデータ更新',
-        'カスタマイズ可能なレイアウト',
-        'データエクスポート機能',
+        'インテリジェントコード生成',
+        '自動コードレビュー',
+        '開発プロセス最適化',
+        'AI駆動デバッグ支援',
       ],
       results: [
-        '意思決定速度60%向上',
-        'データ理解度向上',
-        'レポート作成時間削減',
+        '開発速度50%向上',
+        'コード品質向上',
+        'バグ検出率向上',
       ],
-      githubUrl: 'https://github.com/daideguchi',
-      liveUrl: '/projects/dashboard',
+      githubUrl: 'https://github.com/daideguchi/ai-development-companion',
+      liveUrl: '#',
+    },
+    {
+      id: 5,
+      title: 'Constitutional AI System',
+      description: 'AI憲法システム。AIの倫理的行動を保証し、価値観に基づいた意思決定をサポートする革新的フレームワーク。',
+      image: '/api/placeholder/600/400',
+      technologies: ['Python', 'AI Ethics', 'Machine Learning', 'NLP'],
+      category: 'AI Ethics & Governance',
+      year: '2024',
+      features: [
+        'AI倫理フレームワーク',
+        '価値観ベース意思決定',
+        '透明性・説明可能性',
+        'バイアス検出・軽減',
+      ],
+      results: [
+        'AI倫理コンプライアンス向上',
+        '意思決定透明性確保',
+        'バイアス軽減効果',
+      ],
+      githubUrl: 'https://github.com/daideguchi/constitutional-ai',
+      liveUrl: '#',
+    },
+    {
+      id: 6,
+      title: 'MCP Integration Toolkit',
+      description: 'Model Context Protocol統合ツールキット。AIモデル間の効率的な連携とデータ交換を実現。',
+      image: '/api/placeholder/600/400',
+      technologies: ['Python', 'API Integration', 'Protocol Design', 'AI/ML'],
+      category: 'AI Infrastructure',
+      year: '2024',
+      features: [
+        'モデル間プロトコル統合',
+        '効率的データ交換',
+        'スケーラブルアーキテクチャ',
+        'リアルタイム同期',
+      ],
+      results: [
+        'モデル連携効率化',
+        'データ処理速度向上',
+        'システム統合簡素化',
+      ],
+      githubUrl: 'https://github.com/daideguchi/mcp-integration-toolkit',
+      liveUrl: '#',
+    },
+    {
+      id: 7,
+      title: 'AI News Dashboard',
+      description: '日次AI業界ニュースダッシュボード。構造化データ処理とインテリジェントコンテンツキュレーションでAI業界の最新動向を提供。',
+      image: '/api/placeholder/600/400',
+      technologies: ['Python', 'FastAPI', 'React', 'News APIs', 'NLP'],
+      category: 'AI News & Analytics',
+      year: '2024',
+      features: [
+        '自動ニュース収集・分析',
+        'AI業界トレンド分析',
+        'インテリジェントキュレーション',
+        'リアルタイム更新',
+      ],
+      results: [
+        '情報収集効率90%向上',
+        'トレンド予測精度向上',
+        'ニュース処理自動化',
+      ],
+      githubUrl: 'https://github.com/daideguchi/ai-news-dashboard',
+      liveUrl: '#',
+    },
+    {
+      id: 8,
+      title: 'YouTube Channel Analyzer',
+      description: 'AI駆動のYouTubeチャンネル分析ツール。コンテンツ最適化とオーディエンスエンゲージメント向上のための高度な洞察を提供。',
+      image: '/api/placeholder/600/400',
+      technologies: ['Python', 'YouTube API', 'Machine Learning', 'Data Analytics'],
+      category: 'AI Analytics Tools',
+      year: '2024',
+      features: [
+        'チャンネル詳細分析',
+        'コンテンツ最適化提案',
+        'オーディエンス分析',
+        'パフォーマンス予測',
+      ],
+      results: [
+        'エンゲージメント率向上',
+        'コンテンツ戦略最適化',
+        '視聴者理解度向上',
+      ],
+      githubUrl: 'https://github.com/daideguchi/youtube-channel-analyzer',
+      liveUrl: '#',
+    },
+    {
+      id: 9,
+      title: 'AI Image Generator',
+      description: 'スプレッドシート統合AI画像生成ツール。OpenAI DALL-E APIを使用した自動ビジュアルコンテンツ作成ワークフロー。',
+      image: '/api/placeholder/600/400',
+      technologies: ['Python', 'OpenAI DALL-E', 'Google Sheets API', 'Image Processing'],
+      category: 'AI Content Generation',
+      year: '2024',
+      features: [
+        'スプレッドシート統合',
+        'バッチ画像生成',
+        'カスタムプロンプト処理',
+        '自動ワークフロー',
+      ],
+      results: [
+        'コンテンツ作成時間70%削減',
+        'ビジュアル品質向上',
+        'ワークフロー自動化',
+      ],
+      githubUrl: 'https://github.com/daideguchi/spreadsheet-image-generator',
+      liveUrl: '#',
     },
   ];
 
-  const categories = ['All', 'Web Application', 'E-commerce', 'Data Visualization'];
+  const categories = ['All', 'AI Learning Platform', 'AI Knowledge Management', 'AI Safety & Compliance', 'AI Development Tools', 'AI Ethics & Governance', 'AI Infrastructure', 'AI News & Analytics', 'AI Analytics Tools', 'AI Content Generation'];
 
   return (
     <div className="min-h-screen py-20">
@@ -138,120 +248,138 @@ export default function Portfolio() {
             </p>
           </motion.div>
 
-          <div className="space-y-20">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {projects.map((project, index) => (
               <motion.div
                 key={project.id}
                 initial={{ opacity: 0, y: 50 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1 }}
-                className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-                  index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-                }`}
+                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
               >
-                <div className={index % 2 === 1 ? 'lg:col-start-2' : ''}>
-                  <div className="relative group">
-                    <div className="aspect-video bg-gray-200 rounded-lg overflow-hidden">
-                      {/* プロジェクト画像のプレースホルダー */}
-                      <div className="w-full h-full flex items-center justify-center text-gray-500">
-                        <span className="text-4xl">🖥️</span>
-                      </div>
+                {/* プロジェクト画像 */}
+                <div className="relative">
+                  <div className="aspect-video bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
+                    <div className="text-6xl">
+                      {project.category.includes('AI Learning') && '🎓'}
+                      {project.category.includes('Knowledge') && '📚'}
+                      {project.category.includes('Safety') && '🛡️'}
+                      {project.category.includes('Development') && '⚡'}
+                      {project.category.includes('Ethics') && '⚖️'}
+                      {project.category.includes('Infrastructure') && '🔧'}
+                      {project.category.includes('News') && '📰'}
+                      {project.category.includes('Analytics') && '📊'}
+                      {project.category.includes('Content') && '🎨'}
                     </div>
-                    <div className="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 rounded-lg flex items-center justify-center opacity-0 group-hover:opacity-100">
-                      <div className="flex space-x-4">
-                        <a
-                          href={project.liveUrl}
-                          className="bg-white text-blue-600 p-3 rounded-full hover:bg-gray-100 transition-colors"
-                        >
-                          <ExternalLink size={24} />
-                        </a>
-                        <a
-                          href={project.githubUrl}
-                          className="bg-white text-blue-600 p-3 rounded-full hover:bg-gray-100 transition-colors"
-                        >
-                          <Github size={24} />
-                        </a>
-                      </div>
+                  </div>
+                  <div className="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
+                    <div className="flex space-x-4">
+                      <a
+                        href={project.liveUrl}
+                        className="bg-white text-blue-600 p-3 rounded-full hover:bg-gray-100 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink size={20} />
+                      </a>
+                      <a
+                        href={project.githubUrl}
+                        className="bg-white text-blue-600 p-3 rounded-full hover:bg-gray-100 transition-colors"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <Github size={20} />
+                      </a>
                     </div>
                   </div>
                 </div>
 
-                <div className={index % 2 === 1 ? 'lg:col-start-1 lg:row-start-1' : ''}>
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-sm font-semibold">
+                {/* プロジェクト情報 */}
+                <div className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
                       {project.category}
                     </span>
                     <div className="flex items-center text-gray-500 text-sm">
-                      <Calendar size={16} className="mr-1" />
+                      <Calendar size={14} className="mr-1" />
                       {project.year}
                     </div>
                   </div>
 
-                  <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
                     {project.title}
                   </h3>
                   
-                  <p className="text-lg text-gray-600 mb-6">
+                  <p className="text-gray-600 mb-4 text-sm line-clamp-3">
                     {project.description}
                   </p>
 
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">
                       主な機能
                     </h4>
-                    <ul className="space-y-2">
-                      {project.features.map((feature) => (
-                        <li key={feature} className="flex items-center text-gray-700">
-                          <div className="w-2 h-2 bg-blue-600 rounded-full mr-3"></div>
-                          {feature}
+                    <ul className="space-y-1">
+                      {project.features.slice(0, 3).map((feature) => (
+                        <li key={feature} className="flex items-center text-gray-700 text-sm">
+                          <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2 flex-shrink-0"></div>
+                          <span className="line-clamp-1">{feature}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
-                  <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                  <div className="mb-4">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">
                       成果
                     </h4>
-                    <ul className="space-y-2">
-                      {project.results.map((result) => (
-                        <li key={result} className="flex items-center text-green-700">
-                          <div className="w-2 h-2 bg-green-600 rounded-full mr-3"></div>
-                          {result}
+                    <ul className="space-y-1">
+                      {project.results.slice(0, 2).map((result) => (
+                        <li key={result} className="flex items-center text-green-700 text-sm">
+                          <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2 flex-shrink-0"></div>
+                          <span className="line-clamp-1">{result}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="mb-6">
-                    <h4 className="text-lg font-semibold text-gray-900 mb-3">
+                    <h4 className="text-sm font-semibold text-gray-900 mb-2">
                       使用技術
                     </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
+                    <div className="flex flex-wrap gap-1">
+                      {project.technologies.slice(0, 4).map((tech) => (
                         <span
                           key={tech}
-                          className="bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-sm"
+                          className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
                         >
                           {tech}
                         </span>
                       ))}
+                      {project.technologies.length > 4 && (
+                        <span className="bg-gray-100 text-gray-500 px-2 py-1 rounded text-xs">
+                          +{project.technologies.length - 4}
+                        </span>
+                      )}
                     </div>
                   </div>
 
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-2">
                     <a
                       href={project.liveUrl}
-                      className="bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center gap-2"
+                      className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2 text-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <ExternalLink size={20} />
-                      ライブデモ
+                      <ExternalLink size={16} />
+                      デモ
                     </a>
                     <a
                       href={project.githubUrl}
-                      className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-gray-400 transition-colors duration-200 flex items-center gap-2"
+                      className="flex-1 border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold hover:border-gray-400 transition-colors duration-200 flex items-center justify-center gap-2 text-sm"
+                      target="_blank"
+                      rel="noopener noreferrer"
                     >
-                      <Github size={20} />
+                      <Github size={16} />
                       コード
                     </a>
                   </div>
