@@ -15,7 +15,7 @@ export default function Portfolio() {
       technologies: ['Python', 'Django', 'PostgreSQL', 'OpenAI API', 'React'],
       category: 'AI学習プラットフォーム',
       year: '2024',
-      icon: '/icons/asagami-ai.png', // 実際のアイコンファイル
+      icon: '/icons/asagami-ai.jpeg',
       features: [
         'AIによる自動問題生成',
         'ゲーミフィケーション機能',
@@ -38,7 +38,7 @@ export default function Portfolio() {
       technologies: ['Python', 'Astro', 'JavaScript', 'AI/ML'],
       category: 'AIナレッジ管理',
       year: '2024',
-      icon: null, // アイコン未設定
+      icon: '/icons/wisdom-blog.png',
       features: [
         '開発ログ自動記事化',
         'AI駆動コンテンツ生成',
@@ -61,7 +61,7 @@ export default function Portfolio() {
       technologies: ['React', 'Node.js', 'AI/ML', 'Real-time Analytics'],
       category: 'AI安全性・コンプライアンス',
       year: '2024',
-      icon: null, // アイコン未設定
+      icon: '/icons/ai-safety-monitor.png',
       features: [
         'リアルタイムリスク評価',
         'コンプライアンス追跡',
@@ -84,7 +84,7 @@ export default function Portfolio() {
       technologies: ['Python', 'JavaScript', 'HTML', 'Shell', 'AI/ML'],
       category: 'AI開発ツール',
       year: '2024',
-      icon: null, // アイコン未設定
+      icon: '/icons/ai-development-companion.png',
       features: [
         'インテリジェントコード生成',
         '自動コードレビュー',
@@ -107,7 +107,7 @@ export default function Portfolio() {
       technologies: ['Python', 'AI Ethics', 'Machine Learning', 'NLP'],
       category: 'AI倫理・ガバナンス',
       year: '2024',
-      icon: null, // アイコン未設定
+      icon: '/icons/constitutional-ai.png',
       features: [
         'AI倫理フレームワーク',
         '価値観ベース意思決定',
@@ -130,7 +130,7 @@ export default function Portfolio() {
       technologies: ['Python', 'API Integration', 'Protocol Design', 'AI/ML'],
       category: 'AIインフラストラクチャ',
       year: '2024',
-      icon: null, // アイコン未設定
+      icon: '/icons/mcp-integration-toolkit.png',
       features: [
         'モデル間プロトコル統合',
         '効率的データ交換',
@@ -153,7 +153,7 @@ export default function Portfolio() {
       technologies: ['Python', 'FastAPI', 'React', 'News APIs', 'NLP'],
       category: 'AIニュース・分析',
       year: '2024',
-      icon: null, // アイコン未設定
+      icon: '/icons/ai-news-dashboard.png',
       features: [
         '自動ニュース収集・分析',
         'AI業界トレンド分析',
@@ -176,7 +176,7 @@ export default function Portfolio() {
       technologies: ['Python', 'YouTube API', 'Machine Learning', 'Data Analytics'],
       category: 'AI分析ツール',
       year: '2024',
-      icon: null, // アイコン未設定
+      icon: '/icons/youtube-channel-analyzer.png',
       features: [
         'チャンネル詳細分析',
         'コンテンツ最適化提案',
@@ -199,7 +199,7 @@ export default function Portfolio() {
       technologies: ['Python', 'OpenAI DALL-E', 'Google Sheets API', 'Image Processing'],
       category: 'AIコンテンツ生成',
       year: '2024',
-      icon: null, // アイコン未設定
+      icon: '/icons/ai-image-generator.png',
       features: [
         'スプレッドシート統合',
         'バッチ画像生成',
