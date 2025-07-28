@@ -11,9 +11,9 @@ const Header = () => {
   const navItems = [
     { href: '/', label: 'ホーム' },
     { href: '/about', label: '私について' },
-    { href: '/services', label: '🤖 AIサービス' },
-    { href: '/portfolio', label: '🚀 AI実績' },
-    { href: '/resources', label: 'リソース' },
+    { href: '/services', label: 'サービス' },
+    { href: '/portfolio', label: '実績' },
+    { href: '/resources', label: '資料' },
     { href: '/news', label: 'ニュース' },
     { href: '/contact', label: 'お問い合わせ' },
   ];

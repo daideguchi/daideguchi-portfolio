@@ -21,12 +21,12 @@ export default function About() {
   const timeline = [
     {
       year: '2014-2018',
-      title: '政令市役所 障がい者部門',
+      title: '政令市職員 障がい者部門',
       description: '事業者認可・監査・不正取締を担当。1億円超の返還命令を実行。大規模説明会の企画・登壇も経験。',
     },
     {
       year: '2018-2022',
-      title: '政令市役所 課税部門',
+      title: '政令市職員 課税部門',
       description: '固定資産税業務を担当。Excel/VBA活用で1,000時間の業務効率化を達成。組織的整理整頓カルチャーを醸成。',
     },
     {
@@ -36,7 +36,7 @@ export default function About() {
     },
     {
       year: '2022-2024',
-      title: '政令市役所 企画部門',
+      title: '政令市職員 企画部門',
       description: '宿泊税広報、固定資産税業務改善、DX推進を担当。前任者比20時間/月の残業削減を実現。',
     },
     {
@@ -113,7 +113,7 @@ export default function About() {
                 </div>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                政令市役所での10年間の行政経験を活かし、組織運営と業務効率化のノウハウを蓄積。
+                政令市職員として10年間の行政経験を活かし、組織運営と業務効率化のノウハウを蓄積。
                 クラウドファンディングで580万円調達、AI YouTube事業で年間1000万円超の収益を実現。
                 行政・起業・AI技術の幅広い経験を活かし、お客様のビジネス課題を多角的に解決します。
               </p>

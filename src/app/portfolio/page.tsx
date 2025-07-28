@@ -77,102 +77,18 @@ export default function Portfolio() {
     },
     {
       id: 3,
-      title: 'AI Safety Monitor',
+      title: 'YouTube分析システム',
       description: {
-        ja: 'リアルタイムAI安全性監視ダッシュボード。リスク評価とコンプライアンス追跡を自動化。',
-        en: 'Real-time AI safety monitoring dashboard with automated risk assessment and compliance tracking.'
+        ja: 'YouTube事業における収益分析と最適化を行うデータ分析システム。複数チャンネルの統合管理が可能。',
+        en: 'Data analysis system for YouTube business revenue analysis and optimization with multi-channel management.'
       },
-      technologies: ['React', 'Node.js', 'AI/ML', 'Analytics'],
-      category: 'safety',
-      icon: '/icons/ai-safety-monitor.png',
-      githubUrl: 'https://github.com/daideguchi/ai-safety-monitor',
-      liveUrl: '#',
-      status: 'development'
-    },
-    {
-      id: 4,
-      title: 'AI Development Companion',
-      description: {
-        ja: 'AI開発パートナー。コード生成、レビュー、最適化を統合的にサポート。',
-        en: 'AI development partner providing integrated code generation, review, and optimization support.'
-      },
-      technologies: ['Python', 'JavaScript', 'AI/ML'],
-      category: 'development',
-      icon: '/icons/ai-development-companion.png',
-      githubUrl: 'https://github.com/daideguchi/ai-development-companion',
-      liveUrl: '#',
-      status: 'development'
-    },
-    {
-      id: 5,
-      title: 'Constitutional AI',
-      description: {
-        ja: 'AI倫理フレームワーク。価値観に基づいた意思決定をサポートする革新的システム。',
-        en: 'AI ethics framework supporting value-based decision making with innovative constitutional approach.'
-      },
-      technologies: ['Python', 'AI Ethics', 'ML', 'NLP'],
-      category: 'ethics',
-      icon: '/icons/constitutional-ai.png',
-      githubUrl: 'https://github.com/daideguchi/constitutional-ai',
-      liveUrl: '#',
-      status: 'research'
-    },
-    {
-      id: 6,
-      title: 'MCP Integration Toolkit',
-      description: {
-        ja: 'Model Context Protocol統合ツールキット。AIモデル間の効率的な連携を実現。',
-        en: 'Model Context Protocol integration toolkit enabling efficient AI model collaboration.'
-      },
-      technologies: ['Python', 'API', 'Protocol', 'AI/ML'],
-      category: 'infrastructure',
-      icon: '/icons/mcp-integration-toolkit.png',
-      githubUrl: 'https://github.com/daideguchi/mcp-integration-toolkit',
-      liveUrl: '#',
-      status: 'development'
-    },
-    {
-      id: 7,
-      title: 'AI News Dashboard',
-      description: {
-        ja: 'AI業界ニュースダッシュボード。インテリジェントキュレーションで最新動向を提供。',
-        en: 'AI industry news dashboard with intelligent curation providing latest trends and insights.'
-      },
-      technologies: ['Python', 'FastAPI', 'React', 'NLP'],
-      category: 'news',
-      icon: '/icons/ai-news-dashboard.png',
-      githubUrl: 'https://github.com/daideguchi/ai-news-dashboard',
-      liveUrl: '#',
-      status: 'development'
-    },
-    {
-      id: 8,
-      title: 'YouTube Analyzer',
-      description: {
-        ja: 'YouTubeチャンネル分析ツール。コンテンツ最適化とエンゲージメント向上を支援。',
-        en: 'YouTube channel analyzer providing content optimization and engagement improvement insights.'
-      },
-      technologies: ['Python', 'YouTube API', 'ML', 'Analytics'],
+      technologies: ['Python', 'YouTube API', 'データ分析', 'Streamlit'],
       category: 'analytics',
-      icon: '/icons/youtube-channel-analyzer.png',
-      githubUrl: 'https://github.com/daideguchi/youtube-channel-analyzer',
+      icon: '/icons/youtube-analyzer.png',
+      githubUrl: null,
       liveUrl: '#',
-      status: 'development'
-    },
-    {
-      id: 9,
-      title: 'AI Image Generator',
-      description: {
-        ja: 'スプレッドシート統合AI画像生成ツール。自動ビジュアルコンテンツ作成ワークフロー。',
-        en: 'Spreadsheet-integrated AI image generator with automated visual content creation workflow.'
-      },
-      technologies: ['Python', 'DALL-E', 'Sheets API'],
-      category: 'content',
-      icon: '/icons/ai-image-generator.png',
-      githubUrl: 'https://github.com/daideguchi/spreadsheet-image-generator',
-      liveUrl: '#',
-      status: 'development'
-    },
+      status: 'live'
+    }
   ];
 
   const getStatusColor = (status: string) => {
