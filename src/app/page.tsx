@@ -11,33 +11,41 @@ export default function Home() {
   const content = {
     ja: {
       badge: 'AI開発・機械学習スペシャリスト',
+      greeting: 'こんにちは、私は',
+      name: '出口 大',
+      role: 'AIエンジニア・YouTuber',
       title: 'AI Innovation',
-      subtitle: 'ビジネスを変革する先進的なAIソリューション',
+      subtitle: 'あなたのビジネス課題をAIで解決します',
       description: '機械学習 • 大規模言語モデル • AI自動化',
+      intro: '福岡市役所10年の行政経験、580万円クラウドファンディング成功、AI YouTube事業で年間1000万円超の収益を実現。行政・起業・AI技術の幅広い経験で、あなたのビジネス課題を多角的に解決します。',
       viewPortfolio: '実績を見る',
       viewServices: 'サービス詳細',
       stats: {
-        projects: 'AIプロジェクト',
-        opensource: 'オープンソース',
-        live: 'ライブプロダクト'
+        projects: 'YouTubeチャンネル',
+        revenue: '年間収益（万円）',
+        channels: 'チャンネル売却'
       },
-      featuredTitle: '注目プロジェクト',
-      featuredSubtitle: '実際に稼働中のAIソリューション'
+      featuredTitle: 'AI事業実績',
+      featuredSubtitle: 'YouTubeとAIソリューションで年間1000万円超の収益を実現'
     },
     en: {
       badge: 'AI Development & Machine Learning Specialist',
+      greeting: 'Hello, I am',
+      name: 'Dai Deguchi',
+      role: 'AI Engineer & YouTuber',
       title: 'AI Innovation',
-      subtitle: 'Advanced AI solutions that transform business operations',
+      subtitle: 'Transform your business challenges with AI solutions',
       description: 'Machine Learning • Large Language Models • AI Automation',
+      intro: '10 years of government experience at Fukuoka City Hall, ¥5.8M crowdfunding success, and over ¥10M annual revenue from AI YouTube business. My diverse experience in government, entrepreneurship, and AI technology enables comprehensive business solutions.',
       viewPortfolio: 'View Portfolio',
       viewServices: 'View Services',
       stats: {
-        projects: 'AI Projects',
-        opensource: 'Open Source',
-        live: 'Live Product'
+        projects: 'YouTube Channels',
+        revenue: 'Annual Revenue (¥10K)',
+        channels: 'Channel Sales'
       },
-      featuredTitle: 'Featured Project',
-      featuredSubtitle: 'Live AI solution in production'
+      featuredTitle: 'AI Business Results',
+      featuredSubtitle: 'Over ¥10M annual revenue through YouTube and AI solutions'
     }
   };
 
@@ -83,6 +91,13 @@ export default function Home() {
               {content[language].badge}
             </div>
             
+            {/* Self Introduction */}
+            <div className="mb-10">
+              <p className="text-lg text-gray-600 mb-2">{content[language].greeting}</p>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{content[language].name}</h2>
+              <p className="text-xl text-gray-700 mb-6">{content[language].role}</p>
+            </div>
+            
             {/* Main Title */}
             <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6 leading-tight">
               {content[language].title}
@@ -92,8 +107,13 @@ export default function Home() {
             <p className="text-xl md:text-2xl text-gray-600 mb-4 font-light max-w-3xl mx-auto leading-relaxed">
               {content[language].subtitle}
             </p>
-            <p className="text-lg text-gray-500 mb-12 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-500 mb-6 max-w-2xl mx-auto">
               {content[language].description}
+            </p>
+            
+            {/* Introduction */}
+            <p className="text-base text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed">
+              {content[language].intro}
             </p>
             
             {/* CTA Buttons */}
@@ -116,16 +136,16 @@ export default function Home() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-8 max-w-2xl mx-auto">
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-1">9</div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">4+</div>
                 <div className="text-sm text-gray-600">{content[language].stats.projects}</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-1">100%</div>
-                <div className="text-sm text-gray-600">{content[language].stats.opensource}</div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">1000+</div>
+                <div className="text-sm text-gray-600">{content[language].stats.revenue}</div>
               </div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-gray-900 mb-1">1</div>
-                <div className="text-sm text-gray-600">{content[language].stats.live}</div>
+                <div className="text-3xl font-bold text-gray-900 mb-1">3</div>
+                <div className="text-sm text-gray-600">{content[language].stats.channels}</div>
               </div>
             </div>
           </motion.div>
@@ -155,55 +175,88 @@ export default function Home() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 max-w-4xl mx-auto"
           >
-            <div className="flex flex-col md:flex-row items-center gap-8">
-              <div className="w-20 h-20 rounded-2xl overflow-hidden bg-gray-100 flex-shrink-0">
-                <img
-                  src="/icons/asagami-ai.jpeg"
-                  alt="Asagami AI"
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              
-              <div className="flex-1 text-center md:text-left">
-                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                  <h3 className="text-2xl font-bold text-gray-900">Asagami AI</h3>
-                  <span className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
-                    {language === 'ja' ? 'ライブ' : 'Live'}
-                  </span>
+            <div className="space-y-8">
+              {/* YouTube事業実績 */}
+              <div className="bg-gradient-to-r from-red-50 to-orange-50 p-6 rounded-xl border border-red-100">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-red-500 to-orange-500 rounded-lg flex items-center justify-center">
+                    <span className="text-xl">📺</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {language === 'ja' ? 'YouTube事業' : 'YouTube Business'}
+                    </h3>
+                    <span className="text-red-600 font-medium">
+                      {language === 'ja' ? '年間1000万円超の収益' : '¥10M+ Annual Revenue'}
+                    </span>
+                  </div>
                 </div>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-gray-700 mb-4">
                   {language === 'ja' 
-                    ? 'AI駆動の学習支援システム。個別最適化された問題生成でゲーム感覚の学習体験を提供。'
-                    : 'AI-powered learning support system with personalized question generation and gamified learning experience.'
+                    ? 'AIが生成する仏教・自己啓発コンテンツで高齢者層に人気。複数チャンネル運営で完全自動化された動画制作プロセスを実現。3チャンネルの売却実績あり。'
+                    : 'Popular Buddhist and self-improvement content targeting seniors, generated by AI. Achieved fully automated video production process across multiple channels. Successfully sold 3 channels.'
                   }
                 </p>
-                <div className="flex flex-wrap gap-2 justify-center md:justify-start mb-6">
-                  {['Python', 'Django', 'PostgreSQL', 'OpenAI', 'React'].map((tech) => (
-                    <span key={tech} className="px-3 py-1 bg-gray-100 text-gray-700 rounded-lg text-sm">
-                      {tech}
+                <div className="grid grid-cols-3 gap-4 text-center">
+                  <div>
+                    <div className="text-2xl font-bold text-red-600">4+</div>
+                    <div className="text-sm text-gray-600">{language === 'ja' ? 'チャンネル運営' : 'Channels'}</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-red-600">75%</div>
+                    <div className="text-sm text-gray-600">{language === 'ja' ? '収益シェア' : 'Revenue Share'}</div>
+                  </div>
+                  <div>
+                    <div className="text-2xl font-bold text-red-600">90%</div>
+                    <div className="text-sm text-gray-600">{language === 'ja' ? '自動化率' : 'Automation'}</div>
+                  </div>
+                </div>
+              </div>
+
+              {/* クラウドファンディング実績 */}
+              <div className="bg-gradient-to-r from-blue-50 to-indigo-50 p-6 rounded-xl border border-blue-100">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-indigo-500 rounded-lg flex items-center justify-center">
+                    <span className="text-xl">🚀</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {language === 'ja' ? 'クラウドファンディング' : 'Crowdfunding'}
+                    </h3>
+                    <span className="text-blue-600 font-medium">
+                      {language === 'ja' ? '580万円調達成功' : '¥5.8M Raised'}
                     </span>
-                  ))}
+                  </div>
                 </div>
-                <div className="flex gap-3 justify-center md:justify-start">
-                  <a
-                    href="https://asagamiai.com"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-gray-900 text-white px-6 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors flex items-center gap-2"
-                  >
-                    <ExternalLink size={16} />
-                    {language === 'ja' ? 'サイトを見る' : 'View Site'}
-                  </a>
-                  <a
-                    href="https://github.com/daideguchi/study-self"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="border-2 border-gray-300 text-gray-700 px-6 py-3 rounded-lg font-semibold hover:border-gray-900 hover:text-gray-900 transition-colors flex items-center gap-2"
-                  >
-                    <Github size={16} />
-                    {language === 'ja' ? 'コード' : 'Code'}
-                  </a>
+                <p className="text-gray-700">
+                  {language === 'ja' 
+                    ? 'Makuakeにて物販事業を展開。商品企画から海外メーカー交渉、各種認証取得、マーケティング、物流まで一気通貫で実行。'
+                    : 'Successfully launched product business on Makuake. End-to-end execution from product planning, overseas manufacturer negotiations, certifications, marketing to logistics.'
+                  }
+                </p>
+              </div>
+
+              {/* 行政経験 */}
+              <div className="bg-gradient-to-r from-green-50 to-emerald-50 p-6 rounded-xl border border-green-100">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
+                    <span className="text-xl">🏛️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900">
+                      {language === 'ja' ? '福岡市役所' : 'Fukuoka City Hall'}
+                    </h3>
+                    <span className="text-green-600 font-medium">
+                      {language === 'ja' ? '10年間の行政経験' : '10 Years Government Experience'}
+                    </span>
+                  </div>
                 </div>
+                <p className="text-gray-700">
+                  {language === 'ja' 
+                    ? '障がい者福祉、課税、企画部門を歴任。業務効率化で1,000時間削減、残業20時間/月削減を達成。1億円超の不正返還命令を実行。'
+                    : 'Worked across welfare, taxation, and planning departments. Achieved 1,000-hour efficiency improvement, 20-hour monthly overtime reduction, and executed ¥100M+ fraud recovery.'
+                  }
+                </p>
               </div>
             </div>
           </motion.div>
