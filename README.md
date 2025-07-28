@@ -8,9 +8,9 @@ Modern, enterprise-level portfolio website showcasing freelance software enginee
 
 ## 📋 Service Materials
 
-- **Service Overview**: Google Slides資料（作成予定）
-- **Technical Capabilities**: 技術資料（作成予定）
-- **Case Studies**: 実績紹介（作成予定）
+- **AI Introduction Guide**: [AI入門：事務職のためのAI基礎知識](https://daideguchi-portfolio.vercel.app/AI入門：事務職のためのAI基礎知識/page_1.html) (Interactive HTML Guide)
+- **Gemini CLI Analysis**: [Technical Analysis Report](https://daideguchi-portfolio.vercel.app/resources/presentations/gemini-cli-analysis.pdf) (PDF)
+- **NotebookLM Guide**: [Implementation Guide](https://daideguchi-portfolio.vercel.app/resources/presentations/notebooklm-guide.pdf) (PDF)
 
 ## 🚀 Features
 
