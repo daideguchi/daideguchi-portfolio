@@ -8,9 +8,9 @@ Modern, enterprise-level portfolio website showcasing freelance software enginee
 
 ## 📋 Service Materials
 
-- **Service Overview**: [Google Slides - サービス概要](https://docs.google.com/presentation/d/1abc123/edit)
-- **Technical Capabilities**: [Google Slides - 技術資料](https://docs.google.com/presentation/d/1def456/edit)
-- **Case Studies**: [Google Slides - 実績紹介](https://docs.google.com/presentation/d/1ghi789/edit)
+- **Service Overview**: Google Slides資料（作成予定）
+- **Technical Capabilities**: 技術資料（作成予定）
+- **Case Studies**: 実績紹介（作成予定）
 
 ## 🚀 Features
 

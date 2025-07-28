@@ -24,21 +24,21 @@ export default function Home() {
           >
             <div className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-full text-sm font-semibold mb-8 shadow-lg">
               <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-              🤖 AI開発・コンサルティング専門
+              AI Development & Machine Learning Specialist
             </div>
             
             <h1 className="text-6xl md:text-8xl font-black text-gray-900 mb-6 leading-tight">
-              Build{' '}
+              AI{' '}
               <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-                Solutions
+                Innovation
               </span>
             </h1>
             
             <p className="text-2xl md:text-3xl text-gray-700 mb-4 font-light max-w-4xl mx-auto leading-relaxed">
-              🚀 実際に動作するプロダクトで価値を提供
+              Advanced AI solutions that transform business operations
             </p>
             <p className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto">
-              フルスタック開発・SaaS構築・エンタープライズソリューション
+              Machine Learning • Large Language Models • AI Automation
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -53,22 +53,22 @@ export default function Home() {
                 href="/services"
                 className="group border-3 border-gray-300 text-gray-700 px-10 py-5 rounded-2xl font-bold text-lg hover:border-blue-600 hover:text-blue-600 hover:shadow-xl transition-all duration-300"
               >
-                🤖 AI開発サービス詳細
+                AI Development Services
               </Link>
             </div>
             
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">💼 50+</div>
-                <div className="text-gray-600">エンタープライズ案件</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">3</div>
+                <div className="text-gray-600">Live AI Demos</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-purple-600 mb-2">🚀 15+</div>
-                <div className="text-gray-600">SaaS プロダクト</div>
+                <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
+                <div className="text-gray-600">Functional Code</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-pink-600 mb-2">⚡ 7+</div>
-                <div className="text-gray-600">年の開発経験</div>
+                <div className="text-4xl font-bold text-pink-600 mb-2">Real-time</div>
+                <div className="text-gray-600">Experience</div>
               </div>
             </div>
           </motion.div>
@@ -85,10 +85,10 @@ export default function Home() {
             className="text-center mb-20"
           >
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              🚀 実際の<span className="text-blue-600">プロダクト</span>
+              AI-Powered <span className="text-blue-600">Solutions</span>
             </h2>
             <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
-              動作するデモで技術力を実証
+              Live demonstrations of machine learning and AI capabilities
             </p>
           </motion.div>
 
@@ -104,14 +104,15 @@ export default function Home() {
                   <Code className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  💼 Enterprise SaaS Platform
+                  Enterprise SaaS Platform
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  マルチテナント対応のエンタープライズSaaSプラットフォーム。
-                  ユーザー管理、課金システム、分析ダッシュボードを統合した実際に動作するデモ。
+                  Multi-tenant enterprise platform with AI-driven analytics, 
+                  automated user management, and intelligent billing systems. 
+                  Features machine learning-powered insights and predictive analytics.
                 </p>
                 <div className="mt-4 text-blue-600 font-semibold">
-                  → デモを体験する
+                  → Experience Live Demo
                 </div>
               </motion.div>
             </Link>
@@ -127,14 +128,15 @@ export default function Home() {
                   <Zap className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  📋 Task Management App
+                  AI Task Management System
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  リアルタイム同期とカンバンボード機能を持つタスク管理アプリ。
-                  チーム協業、優先度管理、進捗追跡機能を実装した実用的なデモ。
+                  Intelligent task management with AI-powered priority optimization, 
+                  automated workflow suggestions, and predictive project completion analysis. 
+                  Real-time collaboration with smart resource allocation.
                 </p>
                 <div className="mt-4 text-purple-600 font-semibold">
-                  → デモを体験する
+                  → Experience Live Demo
                 </div>
               </motion.div>
             </Link>
@@ -150,14 +152,15 @@ export default function Home() {
                   <Users className="w-10 h-10 text-white" />
                 </div>
                 <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  🛒 E-commerce Platform
+                  AI-Enhanced E-commerce Platform
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  フル機能のECプラットフォーム。商品管理、ショッピングカート、
-                  決済システム、在庫管理を統合した実際に動作するデモ。
+                  Intelligent e-commerce solution with AI-powered product recommendations, 
+                  dynamic pricing optimization, and automated inventory management. 
+                  Features natural language search and personalized shopping experiences.
                 </p>
                 <div className="mt-4 text-green-600 font-semibold">
-                  → デモを体験する
+                  → Experience Live Demo
                 </div>
               </motion.div>
             </Link>
@@ -180,14 +183,14 @@ export default function Home() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-5xl md:text-6xl font-bold mb-6">
-              プロジェクトを<br />
+              Ready to Transform<br />
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                始めませんか？
+                Your Business?
               </span>
             </h2>
             <p className="text-2xl mb-12 opacity-90 max-w-3xl mx-auto leading-relaxed">
-              あなたのビジネス課題を技術で解決し、<br />
-              共に成功への道筋を描きましょう
+              Leverage cutting-edge AI technology to solve complex challenges<br />
+              and accelerate your digital transformation
             </p>
             
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
@@ -195,23 +198,23 @@ export default function Home() {
                 href="/contact"
                 className="group bg-gradient-to-r from-blue-500 to-purple-500 text-white px-12 py-6 rounded-2xl font-bold text-xl hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center gap-3"
               >
-                無料相談を始める
+                Start AI Consultation
                 <ArrowRight size={24} className="group-hover:translate-x-1 transition-transform" />
               </Link>
               <Link
                 href="/portfolio"
                 className="group border-2 border-white text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                実績を確認する
+                View AI Projects
               </Link>
             </div>
             
             <div className="mt-16 text-center">
-              <p className="text-lg opacity-75 mb-4">信頼いただいている企業様</p>
+              <p className="text-lg opacity-75 mb-4">Core Technologies</p>
               <div className="flex justify-center items-center gap-8 opacity-60">
-                <div className="text-2xl font-bold">Enterprise A</div>
-                <div className="text-2xl font-bold">Startup B</div>
-                <div className="text-2xl font-bold">Company C</div>
+                <div className="text-2xl font-bold">TensorFlow</div>
+                <div className="text-2xl font-bold">PyTorch</div>
+                <div className="text-2xl font-bold">OpenAI API</div>
               </div>
             </div>
           </motion.div>

@@ -8,74 +8,74 @@ export default function Services() {
   const services = [
     {
       icon: Brain,
-      title: '🤖 AI・機械学習開発',
-      description: '最新のAI技術を活用したインテリジェントなシステム開発',
+      title: 'AI & Machine Learning Development',
+      description: 'Custom AI solutions using TensorFlow, PyTorch, and advanced ML algorithms',
       features: [
-        'カスタム機械学習モデル開発',
-        '画像・音声・テキスト解析',
-        '予測分析・レコメンドシステム',
-        'MLOps・モデル運用',
+        'Custom machine learning model development',
+        'Computer vision and NLP solutions',
+        'Predictive analytics and recommendation systems',
+        'MLOps and model deployment',
       ],
       price: '¥800,000〜',
       featured: true,
     },
     {
       icon: Bot,
-      title: '🚀 LLM・生成AI活用',
-      description: 'ChatGPT、Claude等の大規模言語モデルを活用したアプリケーション開発',
+      title: 'Large Language Model Integration',
+      description: 'Advanced LLM applications using GPT, Claude, and custom language models',
       features: [
-        'AIチャットボット開発',
-        '文書生成・要約システム',
-        'RAG（検索拡張生成）システム',
-        'プロンプトエンジニアリング',
+        'Intelligent chatbot development',
+        'Document generation and summarization',
+        'RAG (Retrieval-Augmented Generation) systems',
+        'Advanced prompt engineering',
       ],
       price: '¥600,000〜',
     },
     {
       icon: Zap,
-      title: '⚡ AI業務自動化',
-      description: 'AIを活用した業務プロセスの自動化・効率化',
+      title: 'AI Process Automation',
+      description: 'Intelligent automation solutions for complex business workflows',
       features: [
-        'RPA + AI による高度自動化',
-        'OCR・文書処理自動化',
-        'データ入力・分析自動化',
-        'ワークフロー最適化',
+        'RPA enhanced with AI capabilities',
+        'OCR and document processing automation',
+        'Automated data analysis and insights',
+        'Workflow optimization and intelligence',
       ],
       price: '¥500,000〜',
     },
     {
       icon: Database,
-      title: '📊 AIデータ分析',
-      description: 'ビッグデータとAIを組み合わせた高度なデータ分析・可視化',
+      title: 'AI Data Analytics',
+      description: 'Advanced data analysis and visualization powered by machine learning',
       features: [
-        'ビッグデータ処理・分析',
-        'AI予測モデル構築',
-        'リアルタイムダッシュボード',
-        'ビジネスインサイト抽出',
+        'Big data processing and analysis',
+        'AI-powered predictive modeling',
+        'Real-time analytics dashboards',
+        'Automated business insight extraction',
       ],
       price: '¥700,000〜',
     },
     {
       icon: Cpu,
-      title: '🧠 AIコンサルティング',
-      description: 'AI導入戦略からPoC開発まで包括的なAIコンサルティング',
+      title: 'AI Strategy Consulting',
+      description: 'Comprehensive AI adoption strategy and proof-of-concept development',
       features: [
-        'AI導入戦略策定',
-        'PoC（概念実証）開発',
-        'AI人材育成支援',
-        'ROI分析・効果測定',
+        'AI adoption strategy development',
+        'Proof-of-concept implementation',
+        'AI team training and development',
+        'ROI analysis and impact measurement',
       ],
       price: '¥150,000〜/月',
     },
     {
       icon: Shield,
-      title: '🔒 AI倫理・セキュリティ',
-      description: 'AI システムの倫理的配慮とセキュリティ対策',
+      title: 'AI Ethics & Security',
+      description: 'Responsible AI development with comprehensive security measures',
       features: [
-        'AI倫理ガイドライン策定',
-        'バイアス検出・軽減',
-        'プライバシー保護対策',
-        'AI監査・リスク評価',
+        'AI ethics framework development',
+        'Bias detection and mitigation',
+        'Privacy protection implementation',
+        'AI audit and risk assessment',
       ],
       price: '¥400,000〜',
     },
@@ -84,28 +84,28 @@ export default function Services() {
   const process = [
     {
       step: '01',
-      title: 'ヒアリング',
-      description: 'お客様の課題やご要望を詳しくお聞きします',
+      title: 'AI Requirements Analysis',
+      description: 'Deep dive into your business challenges and AI opportunity assessment',
     },
     {
       step: '02',
-      title: '提案・見積もり',
-      description: '最適なソリューションと詳細な見積もりを提示',
+      title: 'Solution Architecture',
+      description: 'Design optimal AI architecture with detailed technical specifications',
     },
     {
       step: '03',
-      title: '設計・開発',
-      description: 'アジャイル手法で迅速かつ柔軟に開発を進行',
+      title: 'Model Development',
+      description: 'Agile development of custom AI models with continuous validation',
     },
     {
       step: '04',
-      title: 'テスト・納品',
-      description: '徹底的なテストを行い、品質を保証して納品',
+      title: 'Testing & Deployment',
+      description: 'Comprehensive testing, performance optimization, and production deployment',
     },
     {
       step: '05',
-      title: 'サポート',
-      description: '納品後も継続的なサポートを提供',
+      title: 'AI Operations',
+      description: 'Ongoing model monitoring, maintenance, and performance optimization',
     },
   ];
 
@@ -121,10 +121,10 @@ export default function Services() {
             className="text-center"
           >
             <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              🤖 AI開発サービス
+              AI Development Services
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              最新のAI技術でビジネスを革新し、競争優位性を創出します
+              Transform your business with cutting-edge artificial intelligence and machine learning solutions
             </p>
           </motion.div>
         </div>
@@ -140,10 +140,10 @@ export default function Services() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              🚀 AI専門サービス
+              Specialized AI Services
             </h2>
             <p className="text-xl text-gray-600">
-              機械学習からLLM活用まで、AIの力でビジネスを加速
+              From machine learning to large language models, accelerate your business with AI
             </p>
           </motion.div>
 
@@ -203,10 +203,10 @@ export default function Services() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              開発プロセス
+              AI Development Process
             </h2>
             <p className="text-xl text-gray-600">
-              透明性の高いプロセスで安心してプロジェクトを進められます
+              Structured methodology ensuring successful AI implementation and deployment
             </p>
           </motion.div>
 
@@ -243,16 +243,16 @@ export default function Services() {
             transition={{ duration: 0.8 }}
           >
             <h2 className="text-4xl font-bold mb-4">
-              プロジェクトを始めませんか？
+              Ready to Start Your AI Project?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              まずはお気軽にご相談ください。無料でお見積もりいたします。
+              Schedule a consultation to discuss your AI requirements and get a detailed proposal.
             </p>
             <Link
               href="/contact"
               className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-block"
             >
-              無料相談を申し込む
+              Schedule AI Consultation
             </Link>
           </motion.div>
         </div>
