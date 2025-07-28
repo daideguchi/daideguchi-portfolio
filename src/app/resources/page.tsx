@@ -41,6 +41,7 @@ export default function Resources() {
       tags: ['AI', '基礎知識', '事務職', 'ChatGPT', '業務活用', '倫理'],
       totalPages: 20,
       basePath: '/AI入門：事務職のためのAI基礎知識',
+      previewUrl: '/resources/covers/ai-intro-cover.jpg',
       size: '20 pages'
     },
     {
@@ -52,6 +53,7 @@ export default function Resources() {
       date: '2025-01-27',
       tags: ['NotebookLM', 'AI', 'Google', '情報整理', '知識管理'],
       fileUrl: '/resources/presentations/notebooklm-guide.pdf',
+      previewUrl: '/resources/covers/notebooklm-cover.jpg',
       size: '1.8 MB'
     },
     {
@@ -63,6 +65,7 @@ export default function Resources() {
       date: '2025-01-26',
       tags: ['AI', 'Gemini', 'CLI', 'Google API', 'TypeScript'],
       fileUrl: '/resources/presentations/gemini-cli-analysis.pdf',
+      previewUrl: '/resources/covers/gemini-cli-cover.jpg',
       size: '2.1 MB'
     },
     {
@@ -228,12 +231,23 @@ export default function Resources() {
                 {/* Preview Image */}
                 <div className="aspect-video bg-gradient-to-br from-gray-100 to-gray-200 rounded-t-lg overflow-hidden">
                   {resource.previewUrl ? (
-                    <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-                      <span className="text-6xl">{getTypeIcon(resource.type)}</span>
-                    </div>
+                    <img
+                      src={resource.previewUrl}
+                      alt={resource.title}
+                      className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+                      onError={(e) => {
+                        // Fallback to icon if image fails to load
+                        const target = e.target as HTMLImageElement;
+                        target.style.display = 'none';
+                        const fallbackDiv = document.createElement('div');
+                        fallbackDiv.className = 'w-full h-full bg-gray-200 flex items-center justify-center';
+                        fallbackDiv.innerHTML = `<span class="text-6xl">${getTypeIcon(resource.type)}</span>`;
+                        target.parentNode?.appendChild(fallbackDiv);
+                      }}
+                    />
                   ) : (
                     <div className="w-full h-full flex items-center justify-center text-gray-500">
-                      <FileText size={48} />
+                      <span className="text-6xl">{getTypeIcon(resource.type)}</span>
                     </div>
                   )}
                 </div>

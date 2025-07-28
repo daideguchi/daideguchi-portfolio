@@ -57,7 +57,7 @@ export default function Portfolio() {
       technologies: ['Python', 'Django', 'PostgreSQL', 'OpenAI', 'React'],
       category: 'learning',
       icon: '/icons/asagami-ai.jpeg',
-      githubUrl: 'https://github.com/daideguchi/study-self',
+      githubUrl: null,
       liveUrl: 'https://asagamiai.com',
       status: 'live'
     },
@@ -307,21 +307,23 @@ export default function Portfolio() {
                       href={project.liveUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
+                      className={`${project.githubUrl ? 'flex-1' : 'w-full'} bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2`}
                     >
                       <ExternalLink size={14} />
                       {content[language].viewProject}
                     </a>
                   )}
-                  <a
-                    href={project.githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`${project.liveUrl !== '#' ? 'flex-1' : 'w-full'} border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:border-gray-400 hover:bg-gray-50 transition-colors flex items-center justify-center gap-2`}
-                  >
-                    <Github size={14} />
-                    {content[language].viewCode}
-                  </a>
+                  {project.githubUrl && (
+                    <a
+                      href={project.githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`${project.liveUrl !== '#' ? 'flex-1' : 'w-full'} border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:border-gray-400 hover:bg-gray-50 transition-colors flex items-center justify-center gap-2`}
+                    >
+                      <Github size={14} />
+                      {content[language].viewCode}
+                    </a>
+                  )}
                 </div>
               </motion.div>
             ))}
