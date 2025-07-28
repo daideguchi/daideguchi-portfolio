@@ -13,8 +13,9 @@ export default function Portfolio() {
       description: '学習ノートや業務マニュアルをAIで解析し、個別最適化された問題を出題。ゲーム感覚で学べる革新的な学習支援システム。',
       image: '/api/placeholder/600/400',
       technologies: ['Python', 'Django', 'PostgreSQL', 'OpenAI API', 'React'],
-      category: 'AI Learning Platform',
+      category: 'AI学習プラットフォーム',
       year: '2024',
+      icon: '/icons/asagami-ai.png', // 実際のアイコンファイル
       features: [
         'AIによる自動問題生成',
         'ゲーミフィケーション機能',
@@ -35,8 +36,9 @@ export default function Portfolio() {
       description: 'AI駆動の開発者ナレッジ管理システム。開発ログを自動で記事化し、チームの知識共有を効率化。',
       image: '/api/placeholder/600/400',
       technologies: ['Python', 'Astro', 'JavaScript', 'AI/ML'],
-      category: 'AI Knowledge Management',
+      category: 'AIナレッジ管理',
       year: '2024',
+      icon: null, // アイコン未設定
       features: [
         '開発ログ自動記事化',
         'AI駆動コンテンツ生成',
@@ -57,8 +59,9 @@ export default function Portfolio() {
       description: 'リアルタイムAI安全性監視ダッシュボード。AIシステムのリスク評価とコンプライアンス追跡を自動化。',
       image: '/api/placeholder/600/400',
       technologies: ['React', 'Node.js', 'AI/ML', 'Real-time Analytics'],
-      category: 'AI Safety & Compliance',
+      category: 'AI安全性・コンプライアンス',
       year: '2024',
+      icon: null, // アイコン未設定
       features: [
         'リアルタイムリスク評価',
         'コンプライアンス追跡',
@@ -79,8 +82,9 @@ export default function Portfolio() {
       description: '一人の優秀な人間のようなAI開発パートナー。コード生成、レビュー、最適化を統合的にサポート。',
       image: '/api/placeholder/600/400',
       technologies: ['Python', 'JavaScript', 'HTML', 'Shell', 'AI/ML'],
-      category: 'AI Development Tools',
+      category: 'AI開発ツール',
       year: '2024',
+      icon: null, // アイコン未設定
       features: [
         'インテリジェントコード生成',
         '自動コードレビュー',
@@ -101,8 +105,9 @@ export default function Portfolio() {
       description: 'AI憲法システム。AIの倫理的行動を保証し、価値観に基づいた意思決定をサポートする革新的フレームワーク。',
       image: '/api/placeholder/600/400',
       technologies: ['Python', 'AI Ethics', 'Machine Learning', 'NLP'],
-      category: 'AI Ethics & Governance',
+      category: 'AI倫理・ガバナンス',
       year: '2024',
+      icon: null, // アイコン未設定
       features: [
         'AI倫理フレームワーク',
         '価値観ベース意思決定',
@@ -123,8 +128,9 @@ export default function Portfolio() {
       description: 'Model Context Protocol統合ツールキット。AIモデル間の効率的な連携とデータ交換を実現。',
       image: '/api/placeholder/600/400',
       technologies: ['Python', 'API Integration', 'Protocol Design', 'AI/ML'],
-      category: 'AI Infrastructure',
+      category: 'AIインフラストラクチャ',
       year: '2024',
+      icon: null, // アイコン未設定
       features: [
         'モデル間プロトコル統合',
         '効率的データ交換',
@@ -145,8 +151,9 @@ export default function Portfolio() {
       description: '日次AI業界ニュースダッシュボード。構造化データ処理とインテリジェントコンテンツキュレーションでAI業界の最新動向を提供。',
       image: '/api/placeholder/600/400',
       technologies: ['Python', 'FastAPI', 'React', 'News APIs', 'NLP'],
-      category: 'AI News & Analytics',
+      category: 'AIニュース・分析',
       year: '2024',
+      icon: null, // アイコン未設定
       features: [
         '自動ニュース収集・分析',
         'AI業界トレンド分析',
@@ -167,8 +174,9 @@ export default function Portfolio() {
       description: 'AI駆動のYouTubeチャンネル分析ツール。コンテンツ最適化とオーディエンスエンゲージメント向上のための高度な洞察を提供。',
       image: '/api/placeholder/600/400',
       technologies: ['Python', 'YouTube API', 'Machine Learning', 'Data Analytics'],
-      category: 'AI Analytics Tools',
+      category: 'AI分析ツール',
       year: '2024',
+      icon: null, // アイコン未設定
       features: [
         'チャンネル詳細分析',
         'コンテンツ最適化提案',
@@ -189,8 +197,9 @@ export default function Portfolio() {
       description: 'スプレッドシート統合AI画像生成ツール。OpenAI DALL-E APIを使用した自動ビジュアルコンテンツ作成ワークフロー。',
       image: '/api/placeholder/600/400',
       technologies: ['Python', 'OpenAI DALL-E', 'Google Sheets API', 'Image Processing'],
-      category: 'AI Content Generation',
+      category: 'AIコンテンツ生成',
       year: '2024',
+      icon: null, // アイコン未設定
       features: [
         'スプレッドシート統合',
         'バッチ画像生成',
@@ -207,7 +216,7 @@ export default function Portfolio() {
     },
   ];
 
-  const categories = ['All', 'AI Learning Platform', 'AI Knowledge Management', 'AI Safety & Compliance', 'AI Development Tools', 'AI Ethics & Governance', 'AI Infrastructure', 'AI News & Analytics', 'AI Analytics Tools', 'AI Content Generation'];
+  const categories = ['すべて', 'AI学習プラットフォーム', 'AIナレッジ管理', 'AI安全性・コンプライアンス', 'AI開発ツール', 'AI倫理・ガバナンス', 'AIインフラストラクチャ', 'AIニュース・分析', 'AI分析ツール', 'AIコンテンツ生成'];
 
   return (
     <div className="min-h-screen py-20">
@@ -260,17 +269,21 @@ export default function Portfolio() {
                 {/* プロジェクト画像 */}
                 <div className="relative">
                   <div className="aspect-video bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-                    <div className="text-6xl">
-                      {project.category.includes('AI Learning') && '🎓'}
-                      {project.category.includes('Knowledge') && '📚'}
-                      {project.category.includes('Safety') && '🛡️'}
-                      {project.category.includes('Development') && '⚡'}
-                      {project.category.includes('Ethics') && '⚖️'}
-                      {project.category.includes('Infrastructure') && '🔧'}
-                      {project.category.includes('News') && '📰'}
-                      {project.category.includes('Analytics') && '📊'}
-                      {project.category.includes('Content') && '🎨'}
-                    </div>
+                    {project.icon ? (
+                      <Image
+                        src={project.icon}
+                        alt={`${project.title} アイコン`}
+                        width={80}
+                        height={80}
+                        className="rounded-lg"
+                      />
+                    ) : (
+                      <div className="w-20 h-20 bg-blue-200 rounded-lg flex items-center justify-center">
+                        <span className="text-blue-600 font-bold text-lg">
+                          {project.title.charAt(0)}
+                        </span>
+                      </div>
+                    )}
                   </div>
                   <div className="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
                     <div className="flex space-x-4">

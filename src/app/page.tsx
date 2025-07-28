@@ -59,16 +59,16 @@ export default function Home() {
             
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-4xl font-bold text-blue-600 mb-2">10+</div>
-                <div className="text-gray-600">AI Projects</div>
+                <div className="text-4xl font-bold text-blue-600 mb-2">9</div>
+                <div className="text-gray-600">AIプロジェクト</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-purple-600 mb-2">100%</div>
-                <div className="text-gray-600">Open Source</div>
+                <div className="text-gray-600">オープンソース</div>
               </div>
               <div className="text-center">
                 <div className="text-4xl font-bold text-pink-600 mb-2">1</div>
-                <div className="text-gray-600">Live Product</div>
+                <div className="text-gray-600">ライブプロダクト</div>
               </div>
             </div>
           </motion.div>
@@ -340,7 +340,7 @@ export default function Home() {
                 href="/portfolio"
                 className="group border-2 border-white text-white px-12 py-6 rounded-2xl font-bold text-xl hover:bg-white hover:text-gray-900 transition-all duration-300"
               >
-                View AI Projects
+                AIプロジェクトを見る
               </Link>
             </div>
             

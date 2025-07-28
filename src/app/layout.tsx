@@ -16,7 +16,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "daideguchi - AI開発・機械学習専門エンジニア",
-  description: "🤖 AI・機械学習・LLM活用でビジネスを革新するフリーランスAIエンジニアのポートフォリオサイト",
+  description: "AI・機械学習・LLM活用でビジネスを革新するフリーランスAIエンジニアのポートフォリオサイト",
 };
 
 export default function RootLayout({
