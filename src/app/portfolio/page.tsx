@@ -1,429 +1,331 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ExternalLink, Github, Calendar, Tag } from 'lucide-react';
+import { ExternalLink, Github, Globe } from 'lucide-react';
 
 export default function Portfolio() {
+  const [language, setLanguage] = useState<'ja' | 'en'>('ja');
+
+  const content = {
+    ja: {
+      title: 'ポートフォリオ',
+      subtitle: 'AIプロジェクト実績',
+      viewProject: 'プロジェクトを見る',
+      viewCode: 'コードを見る',
+      categories: {
+        'learning': '学習支援',
+        'knowledge': 'ナレッジ管理',
+        'safety': '安全性監視',
+        'development': '開発支援',
+        'ethics': '倫理・ガバナンス',
+        'infrastructure': 'インフラ',
+        'news': 'ニュース分析',
+        'analytics': 'データ分析',
+        'content': 'コンテンツ生成'
+      }
+    },
+    en: {
+      title: 'Portfolio',
+      subtitle: 'AI Project Showcase',
+      viewProject: 'View Project',
+      viewCode: 'View Code',
+      categories: {
+        'learning': 'Learning',
+        'knowledge': 'Knowledge',
+        'safety': 'Safety',
+        'development': 'Development',
+        'ethics': 'Ethics',
+        'infrastructure': 'Infrastructure',
+        'news': 'News',
+        'analytics': 'Analytics',
+        'content': 'Content'
+      }
+    }
+  };
+
   const projects = [
     {
       id: 1,
       title: 'Asagami AI',
-      description: '学習ノートや業務マニュアルをAIで解析し、個別最適化された問題を出題。ゲーム感覚で学べる革新的な学習支援システム。',
-      image: '/api/placeholder/600/400',
-      technologies: ['Python', 'Django', 'PostgreSQL', 'OpenAI API', 'React'],
-      category: 'AI学習プラットフォーム',
-      year: '2024',
+      description: {
+        ja: 'AI駆動の学習支援システム。個別最適化された問題生成でゲーム感覚の学習体験を提供。',
+        en: 'AI-powered learning support system with personalized question generation and gamified learning experience.'
+      },
+      technologies: ['Python', 'Django', 'PostgreSQL', 'OpenAI', 'React'],
+      category: 'learning',
       icon: '/icons/asagami-ai.jpeg',
-      features: [
-        'AIによる自動問題生成',
-        'ゲーミフィケーション機能',
-        '学習進捗の可視化',
-        '個別最適化アルゴリズム',
-      ],
-      results: [
-        '学習効率40%向上',
-        'ユーザー継続率85%',
-        '問題正答率向上',
-      ],
       githubUrl: 'https://github.com/daideguchi/study-self',
       liveUrl: 'https://asagamiai.com',
+      status: 'live'
     },
     {
       id: 2,
       title: 'WISDOM Blog',
-      description: 'AI駆動の開発者ナレッジ管理システム。開発ログを自動で記事化し、チームの知識共有を効率化。',
-      image: '/api/placeholder/600/400',
+      description: {
+        ja: 'AI駆動のナレッジ管理システム。開発ログを自動記事化し、チーム知識共有を効率化。',
+        en: 'AI-driven knowledge management system that automatically converts development logs into articles.'
+      },
       technologies: ['Python', 'Astro', 'JavaScript', 'AI/ML'],
-      category: 'AIナレッジ管理',
-      year: '2024',
+      category: 'knowledge',
       icon: '/icons/wisdom-blog.png',
-      features: [
-        '開発ログ自動記事化',
-        'AI駆動コンテンツ生成',
-        'ナレッジベース構築',
-        'チーム協業支援',
-      ],
-      results: [
-        'ドキュメント作成時間60%削減',
-        'ナレッジ共有効率化',
-        'チーム生産性向上',
-      ],
       githubUrl: 'https://github.com/daideguchi/wisdom-blog',
       liveUrl: '#',
+      status: 'development'
     },
     {
       id: 3,
       title: 'AI Safety Monitor',
-      description: 'リアルタイムAI安全性監視ダッシュボード。AIシステムのリスク評価とコンプライアンス追跡を自動化。',
-      image: '/api/placeholder/600/400',
-      technologies: ['React', 'Node.js', 'AI/ML', 'Real-time Analytics'],
-      category: 'AI安全性・コンプライアンス',
-      year: '2024',
+      description: {
+        ja: 'リアルタイムAI安全性監視ダッシュボード。リスク評価とコンプライアンス追跡を自動化。',
+        en: 'Real-time AI safety monitoring dashboard with automated risk assessment and compliance tracking.'
+      },
+      technologies: ['React', 'Node.js', 'AI/ML', 'Analytics'],
+      category: 'safety',
       icon: '/icons/ai-safety-monitor.png',
-      features: [
-        'リアルタイムリスク評価',
-        'コンプライアンス追跡',
-        'AI安全性指標監視',
-        'アラート・通知システム',
-      ],
-      results: [
-        'リスク検知精度95%',
-        'コンプライアンス効率化',
-        'インシデント対応時間短縮',
-      ],
       githubUrl: 'https://github.com/daideguchi/ai-safety-monitor',
       liveUrl: '#',
+      status: 'development'
     },
     {
       id: 4,
       title: 'AI Development Companion',
-      description: '一人の優秀な人間のようなAI開発パートナー。コード生成、レビュー、最適化を統合的にサポート。',
-      image: '/api/placeholder/600/400',
-      technologies: ['Python', 'JavaScript', 'HTML', 'Shell', 'AI/ML'],
-      category: 'AI開発ツール',
-      year: '2024',
+      description: {
+        ja: 'AI開発パートナー。コード生成、レビュー、最適化を統合的にサポート。',
+        en: 'AI development partner providing integrated code generation, review, and optimization support.'
+      },
+      technologies: ['Python', 'JavaScript', 'AI/ML'],
+      category: 'development',
       icon: '/icons/ai-development-companion.png',
-      features: [
-        'インテリジェントコード生成',
-        '自動コードレビュー',
-        '開発プロセス最適化',
-        'AI駆動デバッグ支援',
-      ],
-      results: [
-        '開発速度50%向上',
-        'コード品質向上',
-        'バグ検出率向上',
-      ],
       githubUrl: 'https://github.com/daideguchi/ai-development-companion',
       liveUrl: '#',
+      status: 'development'
     },
     {
       id: 5,
-      title: 'Constitutional AI System',
-      description: 'AI憲法システム。AIの倫理的行動を保証し、価値観に基づいた意思決定をサポートする革新的フレームワーク。',
-      image: '/api/placeholder/600/400',
-      technologies: ['Python', 'AI Ethics', 'Machine Learning', 'NLP'],
-      category: 'AI倫理・ガバナンス',
-      year: '2024',
+      title: 'Constitutional AI',
+      description: {
+        ja: 'AI倫理フレームワーク。価値観に基づいた意思決定をサポートする革新的システム。',
+        en: 'AI ethics framework supporting value-based decision making with innovative constitutional approach.'
+      },
+      technologies: ['Python', 'AI Ethics', 'ML', 'NLP'],
+      category: 'ethics',
       icon: '/icons/constitutional-ai.png',
-      features: [
-        'AI倫理フレームワーク',
-        '価値観ベース意思決定',
-        '透明性・説明可能性',
-        'バイアス検出・軽減',
-      ],
-      results: [
-        'AI倫理コンプライアンス向上',
-        '意思決定透明性確保',
-        'バイアス軽減効果',
-      ],
       githubUrl: 'https://github.com/daideguchi/constitutional-ai',
       liveUrl: '#',
+      status: 'research'
     },
     {
       id: 6,
       title: 'MCP Integration Toolkit',
-      description: 'Model Context Protocol統合ツールキット。AIモデル間の効率的な連携とデータ交換を実現。',
-      image: '/api/placeholder/600/400',
-      technologies: ['Python', 'API Integration', 'Protocol Design', 'AI/ML'],
-      category: 'AIインフラストラクチャ',
-      year: '2024',
+      description: {
+        ja: 'Model Context Protocol統合ツールキット。AIモデル間の効率的な連携を実現。',
+        en: 'Model Context Protocol integration toolkit enabling efficient AI model collaboration.'
+      },
+      technologies: ['Python', 'API', 'Protocol', 'AI/ML'],
+      category: 'infrastructure',
       icon: '/icons/mcp-integration-toolkit.png',
-      features: [
-        'モデル間プロトコル統合',
-        '効率的データ交換',
-        'スケーラブルアーキテクチャ',
-        'リアルタイム同期',
-      ],
-      results: [
-        'モデル連携効率化',
-        'データ処理速度向上',
-        'システム統合簡素化',
-      ],
       githubUrl: 'https://github.com/daideguchi/mcp-integration-toolkit',
       liveUrl: '#',
+      status: 'development'
     },
     {
       id: 7,
       title: 'AI News Dashboard',
-      description: '日次AI業界ニュースダッシュボード。構造化データ処理とインテリジェントコンテンツキュレーションでAI業界の最新動向を提供。',
-      image: '/api/placeholder/600/400',
-      technologies: ['Python', 'FastAPI', 'React', 'News APIs', 'NLP'],
-      category: 'AIニュース・分析',
-      year: '2024',
+      description: {
+        ja: 'AI業界ニュースダッシュボード。インテリジェントキュレーションで最新動向を提供。',
+        en: 'AI industry news dashboard with intelligent curation providing latest trends and insights.'
+      },
+      technologies: ['Python', 'FastAPI', 'React', 'NLP'],
+      category: 'news',
       icon: '/icons/ai-news-dashboard.png',
-      features: [
-        '自動ニュース収集・分析',
-        'AI業界トレンド分析',
-        'インテリジェントキュレーション',
-        'リアルタイム更新',
-      ],
-      results: [
-        '情報収集効率90%向上',
-        'トレンド予測精度向上',
-        'ニュース処理自動化',
-      ],
       githubUrl: 'https://github.com/daideguchi/ai-news-dashboard',
       liveUrl: '#',
+      status: 'development'
     },
     {
       id: 8,
-      title: 'YouTube Channel Analyzer',
-      description: 'AI駆動のYouTubeチャンネル分析ツール。コンテンツ最適化とオーディエンスエンゲージメント向上のための高度な洞察を提供。',
-      image: '/api/placeholder/600/400',
-      technologies: ['Python', 'YouTube API', 'Machine Learning', 'Data Analytics'],
-      category: 'AI分析ツール',
-      year: '2024',
+      title: 'YouTube Analyzer',
+      description: {
+        ja: 'YouTubeチャンネル分析ツール。コンテンツ最適化とエンゲージメント向上を支援。',
+        en: 'YouTube channel analyzer providing content optimization and engagement improvement insights.'
+      },
+      technologies: ['Python', 'YouTube API', 'ML', 'Analytics'],
+      category: 'analytics',
       icon: '/icons/youtube-channel-analyzer.png',
-      features: [
-        'チャンネル詳細分析',
-        'コンテンツ最適化提案',
-        'オーディエンス分析',
-        'パフォーマンス予測',
-      ],
-      results: [
-        'エンゲージメント率向上',
-        'コンテンツ戦略最適化',
-        '視聴者理解度向上',
-      ],
       githubUrl: 'https://github.com/daideguchi/youtube-channel-analyzer',
       liveUrl: '#',
+      status: 'development'
     },
     {
       id: 9,
       title: 'AI Image Generator',
-      description: 'スプレッドシート統合AI画像生成ツール。OpenAI DALL-E APIを使用した自動ビジュアルコンテンツ作成ワークフロー。',
-      image: '/api/placeholder/600/400',
-      technologies: ['Python', 'OpenAI DALL-E', 'Google Sheets API', 'Image Processing'],
-      category: 'AIコンテンツ生成',
-      year: '2024',
+      description: {
+        ja: 'スプレッドシート統合AI画像生成ツール。自動ビジュアルコンテンツ作成ワークフロー。',
+        en: 'Spreadsheet-integrated AI image generator with automated visual content creation workflow.'
+      },
+      technologies: ['Python', 'DALL-E', 'Sheets API'],
+      category: 'content',
       icon: '/icons/ai-image-generator.png',
-      features: [
-        'スプレッドシート統合',
-        'バッチ画像生成',
-        'カスタムプロンプト処理',
-        '自動ワークフロー',
-      ],
-      results: [
-        'コンテンツ作成時間70%削減',
-        'ビジュアル品質向上',
-        'ワークフロー自動化',
-      ],
       githubUrl: 'https://github.com/daideguchi/spreadsheet-image-generator',
       liveUrl: '#',
+      status: 'development'
     },
   ];
 
-  const categories = ['すべて', 'AI学習プラットフォーム', 'AIナレッジ管理', 'AI安全性・コンプライアンス', 'AI開発ツール', 'AI倫理・ガバナンス', 'AIインフラストラクチャ', 'AIニュース・分析', 'AI分析ツール', 'AIコンテンツ生成'];
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'live': return 'bg-green-100 text-green-800';
+      case 'development': return 'bg-blue-100 text-blue-800';
+      case 'research': return 'bg-purple-100 text-purple-800';
+      default: return 'bg-gray-100 text-gray-800';
+    }
+  };
+
+  const getStatusText = (status: string) => {
+    const statusMap = {
+      ja: { live: 'ライブ', development: '開発中', research: '研究中' },
+      en: { live: 'Live', development: 'Development', research: 'Research' }
+    };
+    return statusMap[language][status as keyof typeof statusMap[typeof language]] || status;
+  };
 
   return (
-    <div className="min-h-screen py-20">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-blue-50 to-indigo-100">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center"
-          >
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">
-              Portfolio
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              これまでに手がけたプロジェクトの一部をご紹介します。
-              それぞれのプロジェクトで得られた成果と学びを大切にしています。
-            </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Projects Section */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              厳選プロジェクト
-            </h2>
-            <p className="text-xl text-gray-600">
-              クライアントの課題解決に焦点を当てた実績
-            </p>
-          </motion.div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {projects.map((project, index) => (
-              <motion.div
-                key={project.id}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.1 }}
-                className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group"
+    <div className="min-h-screen bg-white">
+      {/* Header */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="flex justify-between items-center mb-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 className="text-4xl font-bold text-gray-900 mb-2">
+                {content[language].title}
+              </h1>
+              <p className="text-xl text-gray-600">
+                {content[language].subtitle}
+              </p>
+            </motion.div>
+            
+            {/* Language Toggle */}
+            <div className="flex bg-gray-100 rounded-lg p-1">
+              <button
+                onClick={() => setLanguage('ja')}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  language === 'ja' 
+                    ? 'bg-white text-gray-900 shadow-sm' 
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
               >
-                {/* プロジェクト画像 */}
-                <div className="relative">
-                  <div className="aspect-video bg-gradient-to-br from-blue-50 to-indigo-100 flex items-center justify-center">
-                    {project.icon ? (
-                      <Image
-                        src={project.icon}
-                        alt={`${project.title} アイコン`}
-                        width={80}
-                        height={80}
-                        className="rounded-lg"
-                      />
-                    ) : (
-                      <div className="w-20 h-20 bg-blue-200 rounded-lg flex items-center justify-center">
-                        <span className="text-blue-600 font-bold text-lg">
-                          {project.title.charAt(0)}
-                        </span>
-                      </div>
-                    )}
-                  </div>
-                  <div className="absolute inset-0 bg-blue-600 bg-opacity-0 group-hover:bg-opacity-90 transition-all duration-300 flex items-center justify-center opacity-0 group-hover:opacity-100">
-                    <div className="flex space-x-4">
-                      <a
-                        href={project.liveUrl}
-                        className="bg-white text-blue-600 p-3 rounded-full hover:bg-gray-100 transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <ExternalLink size={20} />
-                      </a>
-                      <a
-                        href={project.githubUrl}
-                        className="bg-white text-blue-600 p-3 rounded-full hover:bg-gray-100 transition-colors"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <Github size={20} />
-                      </a>
-                    </div>
-                  </div>
-                </div>
-
-                {/* プロジェクト情報 */}
-                <div className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <span className="bg-blue-100 text-blue-600 px-3 py-1 rounded-full text-xs font-semibold">
-                      {project.category}
-                    </span>
-                    <div className="flex items-center text-gray-500 text-sm">
-                      <Calendar size={14} className="mr-1" />
-                      {project.year}
-                    </div>
-                  </div>
-
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {project.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 mb-4 text-sm line-clamp-3">
-                    {project.description}
-                  </p>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">
-                      主な機能
-                    </h4>
-                    <ul className="space-y-1">
-                      {project.features.slice(0, 3).map((feature) => (
-                        <li key={feature} className="flex items-center text-gray-700 text-sm">
-                          <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2 flex-shrink-0"></div>
-                          <span className="line-clamp-1">{feature}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-4">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">
-                      成果
-                    </h4>
-                    <ul className="space-y-1">
-                      {project.results.slice(0, 2).map((result) => (
-                        <li key={result} className="flex items-center text-green-700 text-sm">
-                          <div className="w-1.5 h-1.5 bg-green-600 rounded-full mr-2 flex-shrink-0"></div>
-                          <span className="line-clamp-1">{result}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-
-                  <div className="mb-6">
-                    <h4 className="text-sm font-semibold text-gray-900 mb-2">
-                      使用技術
-                    </h4>
-                    <div className="flex flex-wrap gap-1">
-                      {project.technologies.slice(0, 4).map((tech) => (
-                        <span
-                          key={tech}
-                          className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-xs"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                      {project.technologies.length > 4 && (
-                        <span className="bg-gray-100 text-gray-500 px-2 py-1 rounded text-xs">
-                          +{project.technologies.length - 4}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-
-                  <div className="flex space-x-2">
-                    <a
-                      href={project.liveUrl}
-                      className="flex-1 bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 flex items-center justify-center gap-2 text-sm"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <ExternalLink size={16} />
-                      デモ
-                    </a>
-                    <a
-                      href={project.githubUrl}
-                      className="flex-1 border-2 border-gray-300 text-gray-700 px-4 py-2 rounded-lg font-semibold hover:border-gray-400 transition-colors duration-200 flex items-center justify-center gap-2 text-sm"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Github size={16} />
-                      コード
-                    </a>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
+                日本語
+              </button>
+              <button
+                onClick={() => setLanguage('en')}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
+                  language === 'en' 
+                    ? 'bg-white text-gray-900 shadow-sm' 
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                English
+              </button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
-        <div className="container mx-auto px-6 text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-4xl font-bold mb-4">
-              あなたのプロジェクトも成功させませんか？
-            </h2>
-            <p className="text-xl mb-8 opacity-90">
-              これらの実績を活かし、あなたのビジネス課題を解決します
-            </p>
-            <Link
-              href="/contact"
-              className="bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-block"
-            >
-              プロジェクトを相談する
-            </Link>
-          </motion.div>
+      {/* Projects Grid */}
+      <section className="py-20">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {projects.map((project, index) => (
+              <motion.div
+                key={project.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group bg-white border border-gray-200 rounded-2xl p-6 hover:shadow-lg hover:border-gray-300 transition-all duration-300"
+              >
+                {/* Project Icon & Status */}
+                <div className="flex items-start justify-between mb-4">
+                  <div className="w-12 h-12 rounded-xl overflow-hidden bg-gray-100 flex-shrink-0">
+                    <Image
+                      src={project.icon}
+                      alt={project.title}
+                      width={48}
+                      height={48}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(project.status)}`}>
+                    {getStatusText(project.status)}
+                  </span>
+                </div>
+
+                {/* Project Info */}
+                <div className="mb-4">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    {project.title}
+                  </h3>
+                  <p className="text-gray-600 text-sm leading-relaxed mb-3">
+                    {project.description[language]}
+                  </p>
+                  <div className="flex items-center text-xs text-gray-500 mb-3">
+                    <span className={`px-2 py-1 bg-gray-100 rounded-md`}>
+                      {content[language].categories[project.category as keyof typeof content[typeof language]['categories']]}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Technologies */}
+                <div className="mb-6">
+                  <div className="flex flex-wrap gap-1">
+                    {project.technologies.slice(0, 3).map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-1 bg-gray-50 text-gray-700 rounded text-xs"
+                      >
+                        {tech}
+                      </span>
+                    ))}
+                    {project.technologies.length > 3 && (
+                      <span className="px-2 py-1 bg-gray-50 text-gray-500 rounded text-xs">
+                        +{project.technologies.length - 3}
+                      </span>
+                    )}
+                  </div>
+                </div>
+
+                {/* Actions */}
+                <div className="flex gap-2">
+                  {project.liveUrl !== '#' && (
+                    <a
+                      href={project.liveUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex-1 bg-gray-900 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors flex items-center justify-center gap-2"
+                    >
+                      <ExternalLink size={14} />
+                      {content[language].viewProject}
+                    </a>
+                  )}
+                  <a
+                    href={project.githubUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`${project.liveUrl !== '#' ? 'flex-1' : 'w-full'} border border-gray-300 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium hover:border-gray-400 hover:bg-gray-50 transition-colors flex items-center justify-center gap-2`}
+                  >
+                    <Github size={14} />
+                    {content[language].viewCode}
+                  </a>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
       </section>
     </div>
