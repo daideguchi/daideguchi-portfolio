@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Calendar, MapPin, Award, Heart } from 'lucide-react';
+import { Calendar, MapPin, Award, Heart, ExternalLink } from 'lucide-react';
 
 export default function About() {
   const skills = [
@@ -117,6 +117,24 @@ export default function About() {
                 クラウドファンディングで580万円調達、AI YouTube事業で年間1000万円超の収益を実現。
                 行政・起業・AI技術の幅広い経験を活かし、お客様のビジネス課題を多角的に解決します。
               </p>
+              <div className="mb-6 rounded-xl border border-blue-100 bg-blue-50 p-5">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  公開プロダクト: FormPilot Vault
+                </h3>
+                <p className="text-gray-700 leading-relaxed mb-4">
+                  Chrome Web Storeで公開中のフォーム自動入力プロダクトです。個人情報を端末内Vaultに残し、
+                  AIにはフォーム構造だけを渡す設計で、Stripe課金、Cloudflare/Vercel API、21言語UIまで実装しています。
+                </p>
+                <a
+                  href="https://formpilot-vault-api.vercel.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-blue-700 font-semibold hover:text-blue-800"
+                >
+                  FormPilot Vaultを見る
+                  <ExternalLink size={16} />
+                </a>
+              </div>
               <div className="flex items-center gap-3 text-blue-600">
                 <Heart size={20} />
                 <span className="font-semibold">

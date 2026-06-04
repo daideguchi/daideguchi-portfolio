@@ -24,7 +24,8 @@ export default function Portfolio() {
         'infrastructure': 'インフラ',
         'news': 'ニュース分析',
         'analytics': 'データ分析',
-        'content': 'コンテンツ生成'
+        'content': 'コンテンツ生成',
+        'productivity': '業務効率化'
       }
     },
     en: {
@@ -41,7 +42,8 @@ export default function Portfolio() {
         'infrastructure': 'Infrastructure',
         'news': 'News',
         'analytics': 'Analytics',
-        'content': 'Content'
+        'content': 'Content',
+        'productivity': 'Productivity'
       }
     }
   };
@@ -49,6 +51,20 @@ export default function Portfolio() {
   const projects = [
     {
       id: 1,
+      title: 'FormPilot Vault',
+      description: {
+        ja: 'Chrome拡張でWebフォームを確認つき自動入力。個人情報は端末内Vaultに残し、AIにはフォーム構造だけを送るプロダクト。',
+        en: 'A Chrome extension that fills web forms with user review. Personal values stay in a local Vault while AI only sees form structure.'
+      },
+      technologies: ['TypeScript', 'Chrome Extension', 'AI', 'Stripe', 'Cloudflare'],
+      category: 'productivity',
+      icon: '/icons/formpilot-vault.png',
+      githubUrl: 'https://github.com/daideguchi/formpilot-vault',
+      liveUrl: 'https://formpilot-vault-api.vercel.app/',
+      status: 'live'
+    },
+    {
+      id: 2,
       title: 'Asagami AI',
       description: {
         ja: 'AI駆動の学習支援システム。個別最適化された問題生成でゲーム感覚の学習体験を提供。',
@@ -62,7 +78,7 @@ export default function Portfolio() {
       status: 'live'
     },
     {
-      id: 2,
+      id: 3,
       title: 'WISDOM Blog',
       description: {
         ja: 'AI駆動のナレッジ管理システム。開発ログを自動記事化し、チーム知識共有を効率化。',
@@ -76,7 +92,7 @@ export default function Portfolio() {
       status: 'development'
     },
     {
-      id: 3,
+      id: 4,
       title: 'YouTube分析システム',
       description: {
         ja: 'YouTube事業における収益分析と最適化を行うデータ分析システム。複数チャンネルの統合管理が可能。',
