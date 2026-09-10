@@ -1,0 +1,2 @@
+Temporary public-market-data transport link for FXProject-v2 verification.
+https://hyralqtsipcixijwqrwe.supabase.co/functions/v1/fxresearch-temp-tail-download-20260911
